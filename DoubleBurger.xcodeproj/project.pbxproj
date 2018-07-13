@@ -8,15 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		25FC116362B426AF77716A78 /* libPods-DoubleBurger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D245F7EB3D0AB4D998843DA /* libPods-DoubleBurger.a */; };
-		7195416420F90B78008B92CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7195416320F90B78008B92CC /* AppDelegate.swift */; };
-		7195416620F90B78008B92CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7195416520F90B78008B92CC /* ViewController.swift */; };
-		7195416920F90B78008B92CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7195416720F90B78008B92CC /* Main.storyboard */; };
-		7195416B20F90B7B008B92CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7195416A20F90B7B008B92CC /* Assets.xcassets */; };
-		7195416E20F90B7B008B92CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7195416C20F90B7B008B92CC /* LaunchScreen.storyboard */; };
 		7195417920F90B7B008B92CC /* DoubleBurgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7195417820F90B7B008B92CC /* DoubleBurgerTests.swift */; };
 		7195418420F90B7B008B92CC /* DoubleBurgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7195418320F90B7B008B92CC /* DoubleBurgerUITests.swift */; };
-		7195419220F90BBB008B92CC /* FirestoreHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7195419120F90BBB008B92CC /* FirestoreHelper.framework */; };
-		7195419420F90BD1008B92CC /* MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7195419320F90BD1008B92CC /* MVVM.framework */; };
+		71D7496220F94B6500EA1D2F /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7494720F94B6500EA1D2F /* Offer.swift */; };
+		71D7496320F94B6500EA1D2F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7494820F94B6500EA1D2F /* Event.swift */; };
+		71D7496420F94B6500EA1D2F /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7494920F94B6500EA1D2F /* Place.swift */; };
+		71D7496520F94B6500EA1D2F /* OffersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7494C20F94B6500EA1D2F /* OffersVM.swift */; };
+		71D7496620F94B6500EA1D2F /* OfferVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7494D20F94B6500EA1D2F /* OfferVM.swift */; };
+		71D7496720F94B6500EA1D2F /* PlaceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7494F20F94B6500EA1D2F /* PlaceVM.swift */; };
+		71D7496820F94B6500EA1D2F /* PlacesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7495020F94B6500EA1D2F /* PlacesVM.swift */; };
+		71D7496920F94B6500EA1D2F /* EventVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7495220F94B6500EA1D2F /* EventVM.swift */; };
+		71D7496A20F94B6500EA1D2F /* EventsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7495320F94B6500EA1D2F /* EventsVM.swift */; };
+		71D7496B20F94B6500EA1D2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7495520F94B6500EA1D2F /* ViewController.swift */; };
+		71D7496C20F94B6500EA1D2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D7495620F94B6500EA1D2F /* Main.storyboard */; };
+		71D7496D20F94B6500EA1D2F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7495920F94B6500EA1D2F /* Settings.swift */; };
+		71D7496E20F94B6500EA1D2F /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7495A20F94B6500EA1D2F /* Api.swift */; };
+		71D7496F20F94B6500EA1D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D7495C20F94B6500EA1D2F /* Assets.xcassets */; };
+		71D7497020F94B6500EA1D2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71D7495D20F94B6500EA1D2F /* GoogleService-Info.plist */; };
+		71D7497120F94B6500EA1D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D7495E20F94B6500EA1D2F /* LaunchScreen.storyboard */; };
+		71D7497220F94B6500EA1D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7496020F94B6500EA1D2F /* AppDelegate.swift */; };
+		71D7497320F94B6500EA1D2F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71D7496120F94B6500EA1D2F /* Info.plist */; };
+		71D7497520F94EB200EA1D2F /* PaginationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7497420F94EB200EA1D2F /* PaginationQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,20 +50,31 @@
 
 /* Begin PBXFileReference section */
 		7195416020F90B78008B92CC /* DoubleBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7195416320F90B78008B92CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7195416520F90B78008B92CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7195416820F90B78008B92CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7195416A20F90B7B008B92CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7195416D20F90B7B008B92CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7195416F20F90B7B008B92CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7195417420F90B7B008B92CC /* DoubleBurgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleBurgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7195417820F90B7B008B92CC /* DoubleBurgerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleBurgerTests.swift; sourceTree = "<group>"; };
 		7195417A20F90B7B008B92CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7195417F20F90B7B008B92CC /* DoubleBurgerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleBurgerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7195418320F90B7B008B92CC /* DoubleBurgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleBurgerUITests.swift; sourceTree = "<group>"; };
 		7195418520F90B7B008B92CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7195419120F90BBB008B92CC /* FirestoreHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirestoreHelper.framework; sourceTree = "<group>"; };
-		7195419320F90BD1008B92CC /* MVVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MVVM.framework; sourceTree = "<group>"; };
+		71D7494720F94B6500EA1D2F /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		71D7494820F94B6500EA1D2F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		71D7494920F94B6500EA1D2F /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		71D7494C20F94B6500EA1D2F /* OffersVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersVM.swift; sourceTree = "<group>"; };
+		71D7494D20F94B6500EA1D2F /* OfferVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferVM.swift; sourceTree = "<group>"; };
+		71D7494F20F94B6500EA1D2F /* PlaceVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceVM.swift; sourceTree = "<group>"; };
+		71D7495020F94B6500EA1D2F /* PlacesVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesVM.swift; sourceTree = "<group>"; };
+		71D7495220F94B6500EA1D2F /* EventVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventVM.swift; sourceTree = "<group>"; };
+		71D7495320F94B6500EA1D2F /* EventsVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsVM.swift; sourceTree = "<group>"; };
+		71D7495520F94B6500EA1D2F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71D7495720F94B6500EA1D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71D7495920F94B6500EA1D2F /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		71D7495A20F94B6500EA1D2F /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		71D7495C20F94B6500EA1D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71D7495D20F94B6500EA1D2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		71D7495F20F94B6500EA1D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71D7496020F94B6500EA1D2F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		71D7496120F94B6500EA1D2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71D7497420F94EB200EA1D2F /* PaginationQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationQuery.swift; sourceTree = "<group>"; };
 		8D245F7EB3D0AB4D998843DA /* libPods-DoubleBurger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DoubleBurger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4AB7516471BFF7D94FD903 /* Pods-DoubleBurger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubleBurger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoubleBurger/Pods-DoubleBurger.debug.xcconfig"; sourceTree = "<group>"; };
 		DA4CBBDEDD575266D691BFF0 /* Pods-DoubleBurger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubleBurger.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubleBurger/Pods-DoubleBurger.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,8 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7195419420F90BD1008B92CC /* MVVM.framework in Frameworks */,
-				7195419220F90BBB008B92CC /* FirestoreHelper.framework in Frameworks */,
 				25FC116362B426AF77716A78 /* libPods-DoubleBurger.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,12 +131,11 @@
 		7195416220F90B78008B92CC /* DoubleBurger */ = {
 			isa = PBXGroup;
 			children = (
-				7195416320F90B78008B92CC /* AppDelegate.swift */,
-				7195416520F90B78008B92CC /* ViewController.swift */,
-				7195416720F90B78008B92CC /* Main.storyboard */,
-				7195416A20F90B7B008B92CC /* Assets.xcassets */,
-				7195416C20F90B7B008B92CC /* LaunchScreen.storyboard */,
-				7195416F20F90B7B008B92CC /* Info.plist */,
+				71D7495820F94B6500EA1D2F /* Services */,
+				71D7494620F94B6500EA1D2F /* Model */,
+				71D7494A20F94B6500EA1D2F /* View Model */,
+				71D7495420F94B6500EA1D2F /* View */,
+				71D7495B20F94B6500EA1D2F /* Support Files */,
 			);
 			path = DoubleBurger;
 			sourceTree = "<group>";
@@ -141,11 +161,87 @@
 		7195419520F90BF6008B92CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7195419320F90BD1008B92CC /* MVVM.framework */,
-				7195419120F90BBB008B92CC /* FirestoreHelper.framework */,
 				8D245F7EB3D0AB4D998843DA /* libPods-DoubleBurger.a */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		71D7494620F94B6500EA1D2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71D7494720F94B6500EA1D2F /* Offer.swift */,
+				71D7494820F94B6500EA1D2F /* Event.swift */,
+				71D7494920F94B6500EA1D2F /* Place.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		71D7494A20F94B6500EA1D2F /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				71D7497420F94EB200EA1D2F /* PaginationQuery.swift */,
+				71D7494B20F94B6500EA1D2F /* Offer */,
+				71D7494E20F94B6500EA1D2F /* Place */,
+				71D7495120F94B6500EA1D2F /* Event */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		71D7494B20F94B6500EA1D2F /* Offer */ = {
+			isa = PBXGroup;
+			children = (
+				71D7494C20F94B6500EA1D2F /* OffersVM.swift */,
+				71D7494D20F94B6500EA1D2F /* OfferVM.swift */,
+			);
+			path = Offer;
+			sourceTree = "<group>";
+		};
+		71D7494E20F94B6500EA1D2F /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				71D7494F20F94B6500EA1D2F /* PlaceVM.swift */,
+				71D7495020F94B6500EA1D2F /* PlacesVM.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		71D7495120F94B6500EA1D2F /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				71D7495220F94B6500EA1D2F /* EventVM.swift */,
+				71D7495320F94B6500EA1D2F /* EventsVM.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		71D7495420F94B6500EA1D2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71D7495520F94B6500EA1D2F /* ViewController.swift */,
+				71D7495620F94B6500EA1D2F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		71D7495820F94B6500EA1D2F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				71D7495920F94B6500EA1D2F /* Settings.swift */,
+				71D7495A20F94B6500EA1D2F /* Api.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		71D7495B20F94B6500EA1D2F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				71D7495C20F94B6500EA1D2F /* Assets.xcassets */,
+				71D7495D20F94B6500EA1D2F /* GoogleService-Info.plist */,
+				71D7495E20F94B6500EA1D2F /* LaunchScreen.storyboard */,
+				71D7496020F94B6500EA1D2F /* AppDelegate.swift */,
+				71D7496120F94B6500EA1D2F /* Info.plist */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		9D83ACDDB1E7EEC5CBDE7631 /* Pods */ = {
@@ -263,9 +359,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7195416E20F90B7B008B92CC /* LaunchScreen.storyboard in Resources */,
-				7195416B20F90B7B008B92CC /* Assets.xcassets in Resources */,
-				7195416920F90B78008B92CC /* Main.storyboard in Resources */,
+				71D7496F20F94B6500EA1D2F /* Assets.xcassets in Resources */,
+				71D7497120F94B6500EA1D2F /* LaunchScreen.storyboard in Resources */,
+				71D7496C20F94B6500EA1D2F /* Main.storyboard in Resources */,
+				71D7497320F94B6500EA1D2F /* Info.plist in Resources */,
+				71D7497020F94B6500EA1D2F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,8 +427,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7195416620F90B78008B92CC /* ViewController.swift in Sources */,
-				7195416420F90B78008B92CC /* AppDelegate.swift in Sources */,
+				71D7496B20F94B6500EA1D2F /* ViewController.swift in Sources */,
+				71D7496720F94B6500EA1D2F /* PlaceVM.swift in Sources */,
+				71D7496420F94B6500EA1D2F /* Place.swift in Sources */,
+				71D7496520F94B6500EA1D2F /* OffersVM.swift in Sources */,
+				71D7496820F94B6500EA1D2F /* PlacesVM.swift in Sources */,
+				71D7496320F94B6500EA1D2F /* Event.swift in Sources */,
+				71D7496E20F94B6500EA1D2F /* Api.swift in Sources */,
+				71D7496A20F94B6500EA1D2F /* EventsVM.swift in Sources */,
+				71D7497220F94B6500EA1D2F /* AppDelegate.swift in Sources */,
+				71D7496920F94B6500EA1D2F /* EventVM.swift in Sources */,
+				71D7497520F94EB200EA1D2F /* PaginationQuery.swift in Sources */,
+				71D7496220F94B6500EA1D2F /* Offer.swift in Sources */,
+				71D7496D20F94B6500EA1D2F /* Settings.swift in Sources */,
+				71D7496620F94B6500EA1D2F /* OfferVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,18 +476,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7195416720F90B78008B92CC /* Main.storyboard */ = {
+		71D7495620F94B6500EA1D2F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7195416820F90B78008B92CC /* Base */,
+				71D7495720F94B6500EA1D2F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		7195416C20F90B7B008B92CC /* LaunchScreen.storyboard */ = {
+		71D7495E20F94B6500EA1D2F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7195416D20F90B7B008B92CC /* Base */,
+				71D7495F20F94B6500EA1D2F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -509,8 +619,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DoubleBurger",
+					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = DoubleBurger/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DoubleBurger/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,8 +644,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DoubleBurger",
+					"$(PROJECT_DIR)/Frameworks",
 				);
-				INFOPLIST_FILE = DoubleBurger/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DoubleBurger/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,4 +1,5 @@
 PODS:
+  - AuthController (0.1)
   - BoringSSL (10.0.5):
     - BoringSSL/Implementation (= 10.0.5)
     - BoringSSL/Interface (= 10.0.5)
@@ -59,6 +60,11 @@ PODS:
   - FirebaseUI/Storage (5.0.1):
     - Firebase/Storage (~> 5.0)
     - SDWebImage (~> 4.0)
+  - FirestoreHelper (0.1):
+    - AuthController
+    - Firebase/Auth
+    - Firebase/Core
+    - Firebase/Firestore
   - GoogleToolboxForMac/Defines (2.1.4)
   - GoogleToolboxForMac/Logger (2.1.4):
     - GoogleToolboxForMac/Defines (= 2.1.4)
@@ -87,6 +93,7 @@ PODS:
     - gRPC-RxLibrary (= 1.13.0)
   - GTMSessionFetcher/Core (1.1.15)
   - leveldb-library (1.20)
+  - MVVM (0.1)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -105,6 +112,7 @@ PODS:
   - UIColor_Hex_Swift (4.0.1)
 
 DEPENDENCIES:
+  - AuthController (from `/Users/ysoftware/Documents/Work/Shared/AuthController`)
   - DeckTransition (~> 2.0)
   - Firebase/Auth
   - Firebase/Core
@@ -112,6 +120,8 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - FirebaseUI/Storage
+  - FirestoreHelper (from `/Users/ysoftware/Documents/Work/Shared/FirestoreHelper`)
+  - MVVM (from `/Users/ysoftware/Documents/Work/Shared/MVVM`)
   - R.swift
   - SDWebImage (~> 4.0)
   - SwiftLocation
@@ -146,7 +156,16 @@ SPEC REPOS:
     - SwiftyJSON
     - UIColor_Hex_Swift
 
+EXTERNAL SOURCES:
+  AuthController:
+    :path: "/Users/ysoftware/Documents/Work/Shared/AuthController"
+  FirestoreHelper:
+    :path: "/Users/ysoftware/Documents/Work/Shared/FirestoreHelper"
+  MVVM:
+    :path: "/Users/ysoftware/Documents/Work/Shared/MVVM"
+
 SPEC CHECKSUMS:
+  AuthController: a3ad28e16ebdc0f81807dcd6d12d0a22f9582219
   BoringSSL: cf3f1793eb6e3c445c4d150456341f149c268a35
   DeckTransition: 2300694f94fbeca2c103f365dc9dc09ffae14a4f
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
@@ -158,6 +177,7 @@ SPEC CHECKSUMS:
   FirebaseMessaging: f43eb0c0e1da096e659de6f713038e74862a62cd
   FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
   FirebaseUI: 5d97d3d5d6a019fc960eb573ea6ce9fb8c310669
+  FirestoreHelper: e656055483465ca81d81c9410dbe62757626aee9
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   gRPC: 81b990caa01d7c32605d300c2ffd1b5ba0ef9e49
   gRPC-Core: a56b086a8ef5ced6f6ba5be5bc0a63fca185015a
@@ -165,6 +185,7 @@ SPEC CHECKSUMS:
   gRPC-RxLibrary: fa6852f98d6ec0b73c0ec2f6406c26943099d501
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  MVVM: beb5f9f1f76d65a9dbb65421bcfe27bc5074beda
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
@@ -174,6 +195,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UIColor_Hex_Swift: c5ff88470499383b8fd85302d59344bb24ba9436
 
-PODFILE CHECKSUM: 9597882a606e61537695a5b62aee846642bec364
+PODFILE CHECKSUM: 5469bc24d313ad430987fcb3b555fb04b0623385
 
 COCOAPODS: 1.5.2
