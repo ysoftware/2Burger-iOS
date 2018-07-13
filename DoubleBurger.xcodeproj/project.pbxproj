@@ -190,8 +190,8 @@
 		71D7494B20F94B6500EA1D2F /* Offer */ = {
 			isa = PBXGroup;
 			children = (
-				71D7494C20F94B6500EA1D2F /* OffersVM.swift */,
 				71D7494D20F94B6500EA1D2F /* OfferVM.swift */,
+				71D7494C20F94B6500EA1D2F /* OffersVM.swift */,
 			);
 			path = Offer;
 			sourceTree = "<group>";
