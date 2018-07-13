@@ -1,0 +1,6 @@
+module Pods_DoubleBurger {
+  umbrella header "Pods-DoubleBurger-umbrella.h"
+
+  export *
+  module * { export * }
+}

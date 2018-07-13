@@ -1,0 +1,11 @@
+framework module FirestoreHelper {
+  umbrella header "FirestoreHelper.h"
+
+  export *
+  module * { export * }
+}
+
+module FirestoreHelper.Swift {
+    header "FirestoreHelper-Swift.h"
+    requires objc
+}
