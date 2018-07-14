@@ -7,6 +7,7 @@
 //
 
 import MVVM
+import SDWebImage
 import UIKit
 
 final class OfferVM:ViewModel<Offer> {
@@ -26,6 +27,7 @@ final class OfferVM:ViewModel<Offer> {
 	}
 
 	func setImage(into imageView:UIImageView) {
-		
+		guard let urlString = model?.imageUrl, let url = URL(string: urlString) else { return }
+		imageView.sd_setImage(with: url)
 	}
 }

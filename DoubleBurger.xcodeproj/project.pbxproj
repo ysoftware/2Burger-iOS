@@ -180,8 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				71D7497420F94EB200EA1D2F /* PaginationQuery.swift */,
-				71D7494B20F94B6500EA1D2F /* Offer */,
 				71D7494E20F94B6500EA1D2F /* Place */,
+				71D7494B20F94B6500EA1D2F /* Offer */,
 				71D7495120F94B6500EA1D2F /* Event */,
 			);
 			path = "View Model";

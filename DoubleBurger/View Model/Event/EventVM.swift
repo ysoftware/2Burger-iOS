@@ -8,6 +8,7 @@
 
 import MVVM
 import UIKit
+import SDWebImage
 
 final class EventVM:ViewModel<Event> {
 
@@ -32,6 +33,7 @@ final class EventVM:ViewModel<Event> {
 	}
 
 	func setImage(into imageView:UIImageView) {
-
+		guard let urlString = model?.imageUrl, let url = URL(string: urlString) else { return }
+		imageView.sd_setImage(with: url)
 	}
 }
