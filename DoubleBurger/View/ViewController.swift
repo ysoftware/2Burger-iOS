@@ -9,7 +9,9 @@
 import UIKit
 import MVVM
 
-class ViewController: UIViewController {
+final class NewsViewController: UIViewController {
+
+	@IBOutlet weak var tableView: UITableView!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -17,4 +19,3 @@ class ViewController: UIViewController {
 		
 	}
 }
-

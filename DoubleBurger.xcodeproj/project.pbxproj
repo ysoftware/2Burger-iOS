@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25FC116362B426AF77716A78 /* libPods-DoubleBurger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D245F7EB3D0AB4D998843DA /* libPods-DoubleBurger.a */; };
+		715F6C3920FD0C030045C13D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F6C3820FD0C030045C13D /* R.generated.swift */; };
 		7195417920F90B7B008B92CC /* DoubleBurgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7195417820F90B7B008B92CC /* DoubleBurgerTests.swift */; };
 		7195418420F90B7B008B92CC /* DoubleBurgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7195418320F90B7B008B92CC /* DoubleBurgerUITests.swift */; };
 		71D7496220F94B6500EA1D2F /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7494720F94B6500EA1D2F /* Offer.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		715F6C3820FD0C030045C13D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7195416020F90B78008B92CC /* DoubleBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7195417420F90B7B008B92CC /* DoubleBurgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleBurgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7195417820F90B7B008B92CC /* DoubleBurgerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleBurgerTests.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		71D7495B20F94B6500EA1D2F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				715F6C3820FD0C030045C13D /* R.generated.swift */,
 				71D7495C20F94B6500EA1D2F /* Assets.xcassets */,
 				71D7495D20F94B6500EA1D2F /* GoogleService-Info.plist */,
 				71D7495E20F94B6500EA1D2F /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			buildConfigurationList = 7195418820F90B7B008B92CC /* Build configuration list for PBXNativeTarget "DoubleBurger" */;
 			buildPhases = (
 				24449C46ACAC1398F017145A /* [CP] Check Pods Manifest.lock */,
+				715F6C3720FD0B100045C13D /* R.Swift */,
 				7195415C20F90B78008B92CC /* Sources */,
 				7195415D20F90B78008B92CC /* Frameworks */,
 				7195415E20F90B78008B92CC /* Resources */,
@@ -402,6 +406,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		715F6C3720FD0B100045C13D /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.Swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
 		B1E79B68E3956796646A8BDE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,6 +447,7 @@
 			files = (
 				71D7496B20F94B6500EA1D2F /* ViewController.swift in Sources */,
 				71D7496720F94B6500EA1D2F /* PlaceVM.swift in Sources */,
+				715F6C3920FD0C030045C13D /* R.generated.swift in Sources */,
 				71D7496420F94B6500EA1D2F /* Place.swift in Sources */,
 				71D7496520F94B6500EA1D2F /* OffersVM.swift in Sources */,
 				71D7496820F94B6500EA1D2F /* PlacesVM.swift in Sources */,

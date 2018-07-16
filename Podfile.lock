@@ -112,7 +112,7 @@ PODS:
   - UIColor_Hex_Swift (4.0.1)
 
 DEPENDENCIES:
-  - AuthController (from `/Users/ysoftware/Documents/Work/Shared/AuthController`)
+  - AuthController (from `/Users/ysoftware/Documents/Work/Shared/AuthController-iOS`)
   - DeckTransition (~> 2.0)
   - Firebase/Auth
   - Firebase/Core
@@ -120,8 +120,8 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - FirebaseUI/Storage
-  - FirestoreHelper (from `/Users/ysoftware/Documents/Work/Shared/FirestoreHelper`)
-  - MVVM (from `/Users/ysoftware/Documents/Work/Shared/MVVM`)
+  - FirestoreHelper (from `/Users/ysoftware/Documents/Work/Shared/FirestoreHelper-iOS`)
+  - MVVM (from `/Users/ysoftware/Documents/Work/Shared/MVVM-iOS`)
   - R.swift
   - SDWebImage (~> 4.0)
   - SwiftLocation
@@ -158,11 +158,11 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   AuthController:
-    :path: "/Users/ysoftware/Documents/Work/Shared/AuthController"
+    :path: "/Users/ysoftware/Documents/Work/Shared/AuthController-iOS"
   FirestoreHelper:
-    :path: "/Users/ysoftware/Documents/Work/Shared/FirestoreHelper"
+    :path: "/Users/ysoftware/Documents/Work/Shared/FirestoreHelper-iOS"
   MVVM:
-    :path: "/Users/ysoftware/Documents/Work/Shared/MVVM"
+    :path: "/Users/ysoftware/Documents/Work/Shared/MVVM-iOS"
 
 SPEC CHECKSUMS:
   AuthController: a3ad28e16ebdc0f81807dcd6d12d0a22f9582219
@@ -195,6 +195,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UIColor_Hex_Swift: c5ff88470499383b8fd85302d59344bb24ba9436
 
-PODFILE CHECKSUM: 5469bc24d313ad430987fcb3b555fb04b0623385
+PODFILE CHECKSUM: afe70330f005133dc264b1c1b342de94cefb6c46
 
 COCOAPODS: 1.5.2

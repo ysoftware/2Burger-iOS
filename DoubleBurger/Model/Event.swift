@@ -13,7 +13,6 @@ final class Event: Codable {
 	var id = ""
 	var title = ""
 	var text = ""
-	var imageUrl = ""
 	var timestamp:Double = 0
 }
 

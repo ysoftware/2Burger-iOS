@@ -13,7 +13,7 @@ final class Offer: Codable {
 	var id = ""
 	var title = ""
 	var text = ""
-	var imageUrl = ""
+	var timestamp:Double = 0
 	var isActive:Bool? = false
 }
 

@@ -8,6 +8,7 @@
 
 import MVVM
 import SDWebImage
+import FirebaseUI
 import UIKit
 
 final class OfferVM:ViewModel<Offer> {
@@ -27,7 +28,8 @@ final class OfferVM:ViewModel<Offer> {
 	}
 
 	func setImage(into imageView:UIImageView) {
-		guard let urlString = model?.imageUrl, let url = URL(string: urlString) else { return }
-		imageView.sd_setImage(with: url)
+		guard let id = model?.id else { return }
+		let ref = Storage.storage().reference(withPath: "images/" + id)
+		imageView.sd_setImage(with: ref)
 	}
 }
