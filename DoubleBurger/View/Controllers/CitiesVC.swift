@@ -49,6 +49,9 @@ extension CitiesViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+		let city = viewModel.item(at: indexPath.row)
+		Settings.set(selectedPlace: city.id)
+		dismiss()
 	}
 }
 

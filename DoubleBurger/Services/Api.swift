@@ -14,26 +14,24 @@ struct Api {
 	private init() {}
 
 	static func getEvents(with query: PaginationQuery,
-						  _ completion: @escaping ([Event], DocumentSnapshot?, Error?)->Void) {
+						  _ completion: @escaping (PaginatedResult<[Event]>)->Void) {
 		let request = placeRef.collection(Keys.events).order(by: Keys.timestamp)
 		FirestoreHelper.getList(from: request,
 						  cursor: query.cursor,
-						  limit: query.size) { (events:[Event], cursor, error) in
-			completion(events, cursor, error)
-		}
+						  limit: query.size,
+						  completion)
 	}
 
 	static func getOffers(with query: PaginationQuery,
-						  _ completion: @escaping ([Offer], DocumentSnapshot?, Error?)->Void) {
+						  _ completion: @escaping (PaginatedResult<[Offer]>)->Void) {
 		let request = placeRef.collection(Keys.offers).order(by: Keys.timestamp)
 		FirestoreHelper.getList(from: request,
 								cursor: query.cursor,
-								limit: query.size) { (events:[Offer], cursor, error) in
-									completion(events, cursor, error)
-		}
+								limit: query.size,
+								completion)
 	}
 
-	static func getPlaces(_ completion: @escaping ([Place], Error?)->Void) {
+	static func getPlaces(_ completion: @escaping (Result<[Place]>)->Void) {
 		FirestoreHelper.getList(from: placesRef, completion)
 	}
 }

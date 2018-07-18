@@ -18,8 +18,10 @@ final class TabbarVC: UITabBarController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
-		// check if needs to show this
-		present(R.storyboard.city.cityController()!.inNavigationController, animated: false)
+		if Settings.selectedPlace == nil {
+			present(R.storyboard.city.cityController()!.inNavigationController,
+					animated: false)
+		}
 	}
 
 }

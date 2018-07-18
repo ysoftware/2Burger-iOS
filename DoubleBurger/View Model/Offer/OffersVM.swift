@@ -11,11 +11,16 @@ import MVVM
 final class OffersVM: ArrayViewModel<Offer, OfferVM, PaginationQuery> {
 
 	override func fetchData(_ query: PaginationQuery?,
-							_ block: @escaping ([Offer], Error?) -> Void) {
+							_ block: @escaping (Result<[Offer]>) -> Void) {
 		guard let query = query else { return }
-		Api.getOffers(with: query) { results, cursor, error in
-			block(results, error)
-			query.cursor = cursor
+		Api.getOffers(with: query) { result in
+			switch result {
+			case .data(let data, let cursor):
+				query.cursor = cursor
+				block(.data(data))
+			case .error(let error):
+				block(.error(error))
+			}
 		}
 	}
 }
