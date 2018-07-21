@@ -10,6 +10,11 @@ import MVVM
 
 final class EventsVM: ArrayViewModel<Event, EventVM, PaginationQuery> {
 
+	override init() {
+		super.init()
+		self.query = PaginationQuery()
+	}
+
 	override func fetchData(_ query: PaginationQuery?,
 							_ block: @escaping (Result<[Event]>) -> Void) {
 		guard let query = query else { return }

@@ -10,6 +10,11 @@ import MVVM
 
 final class OffersVM: ArrayViewModel<Offer, OfferVM, PaginationQuery> {
 
+	override init() {
+		super.init()
+		self.query = PaginationQuery()
+	}
+
 	override func fetchData(_ query: PaginationQuery?,
 							_ block: @escaping (Result<[Offer]>) -> Void) {
 		guard let query = query else { return }
