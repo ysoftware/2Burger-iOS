@@ -29,7 +29,7 @@ final class OfferVM:ViewModel<Offer> {
 
 	func setImage(into imageView:UIImageView) {
 		guard let id = model?.id else { return }
-		let ref = Storage.storage().reference(withPath: "offers/" + id)
+		let ref = Storage.storage().reference(withPath: "offers/\(id)/.jpg")
 		imageView.sd_setImage(with: ref)
 	}
 }

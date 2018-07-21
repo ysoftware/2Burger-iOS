@@ -35,7 +35,7 @@ final class EventVM:ViewModel<Event> {
 
 	func setImage(into imageView:UIImageView) {
 		guard let id = model?.id else { return }
-		let ref = Storage.storage().reference(withPath: "events/" + id)
+		let ref = Storage.storage().reference(withPath: "events/\(id)/.jpg")
 		imageView.sd_setImage(with: ref)
 	}
 }
