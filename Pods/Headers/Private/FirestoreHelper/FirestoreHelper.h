@@ -1,1 +1,1 @@
-../../../../../../Shared/FirestoreHelper-iOS/FirestoreHelper/Support Files/FirestoreHelper.h
+../../../FirestoreHelper/FirestoreHelper/Support Files/FirestoreHelper.h

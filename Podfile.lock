@@ -61,10 +61,10 @@ PODS:
     - Firebase/Storage (~> 5.0)
     - SDWebImage (~> 4.0)
   - FirestoreHelper (0.1):
-    - AuthController
     - Firebase/Auth
     - Firebase/Core
     - Firebase/Firestore
+    - Result
   - GoogleToolboxForMac/Defines (2.1.4)
   - GoogleToolboxForMac/Logger (2.1.4):
     - GoogleToolboxForMac/Defines (= 2.1.4)
@@ -93,7 +93,8 @@ PODS:
     - gRPC-RxLibrary (= 1.13.0)
   - GTMSessionFetcher/Core (1.1.15)
   - leveldb-library (1.20)
-  - MVVM (0.1)
+  - MVVM (0.1):
+    - Result
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -103,6 +104,7 @@ PODS:
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
+  - Result (4.0.0)
   - SDWebImage (4.4.1):
     - SDWebImage/Core (= 4.4.1)
   - SDWebImage/Core (4.4.1)
@@ -112,7 +114,7 @@ PODS:
   - UIColor_Hex_Swift (4.0.1)
 
 DEPENDENCIES:
-  - AuthController (from `/Users/ysoftware/Documents/Work/Shared/AuthController-iOS`)
+  - "AuthController (from `https://profitprojectsbot:12345678@bitbucket.org/ysoftware/authcontroller.git`, branch `0.1`)"
   - DeckTransition (~> 2.0)
   - Firebase/Auth
   - Firebase/Core
@@ -120,8 +122,8 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - FirebaseUI/Storage
-  - FirestoreHelper (from `/Users/ysoftware/Documents/Work/Shared/FirestoreHelper-iOS`)
-  - MVVM (from `/Users/ysoftware/Documents/Work/Shared/MVVM-iOS`)
+  - "FirestoreHelper (from `https://profitprojectsbot:12345678@bitbucket.org/ysoftware/firestorehelper`)"
+  - "MVVM (from `https://profitprojectsbot:12345678@bitbucket.org/ysoftware/mvvm.git`)"
   - R.swift
   - SDWebImage (~> 4.0)
   - SwiftLocation
@@ -151,6 +153,7 @@ SPEC REPOS:
     - Protobuf
     - R.swift
     - R.swift.Library
+    - Result
     - SDWebImage
     - SwiftLocation
     - SwiftyJSON
@@ -158,14 +161,26 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   AuthController:
-    :path: "/Users/ysoftware/Documents/Work/Shared/AuthController-iOS"
+    :branch: '0.1'
+    :git: "https://profitprojectsbot:12345678@bitbucket.org/ysoftware/authcontroller.git"
   FirestoreHelper:
-    :path: "/Users/ysoftware/Documents/Work/Shared/FirestoreHelper-iOS"
+    :git: "https://profitprojectsbot:12345678@bitbucket.org/ysoftware/firestorehelper"
   MVVM:
-    :path: "/Users/ysoftware/Documents/Work/Shared/MVVM-iOS"
+    :git: "https://profitprojectsbot:12345678@bitbucket.org/ysoftware/mvvm.git"
+
+CHECKOUT OPTIONS:
+  AuthController:
+    :commit: 62fe6c0586b9bbf03b1c4aa283dea63c967823b1
+    :git: "https://profitprojectsbot:12345678@bitbucket.org/ysoftware/authcontroller.git"
+  FirestoreHelper:
+    :commit: 904079c3d2f84ee5705f8d935733a2ab1424c86c
+    :git: "https://profitprojectsbot:12345678@bitbucket.org/ysoftware/firestorehelper"
+  MVVM:
+    :commit: 86b83e7fb0d0376aa8f3d8239999ab532bd79e2e
+    :git: "https://profitprojectsbot:12345678@bitbucket.org/ysoftware/mvvm.git"
 
 SPEC CHECKSUMS:
-  AuthController: a3ad28e16ebdc0f81807dcd6d12d0a22f9582219
+  AuthController: 24dc6d10c756a68557354c5e2119283b3f387c6c
   BoringSSL: cf3f1793eb6e3c445c4d150456341f149c268a35
   DeckTransition: 2300694f94fbeca2c103f365dc9dc09ffae14a4f
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
@@ -177,7 +192,7 @@ SPEC CHECKSUMS:
   FirebaseMessaging: f43eb0c0e1da096e659de6f713038e74862a62cd
   FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
   FirebaseUI: 5d97d3d5d6a019fc960eb573ea6ce9fb8c310669
-  FirestoreHelper: e656055483465ca81d81c9410dbe62757626aee9
+  FirestoreHelper: 62cf415b74fbf2177e515b8e5eea9f62e74cfe0f
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   gRPC: 81b990caa01d7c32605d300c2ffd1b5ba0ef9e49
   gRPC-Core: a56b086a8ef5ced6f6ba5be5bc0a63fca185015a
@@ -185,16 +200,17 @@ SPEC CHECKSUMS:
   gRPC-RxLibrary: fa6852f98d6ec0b73c0ec2f6406c26943099d501
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
-  MVVM: beb5f9f1f76d65a9dbb65421bcfe27bc5074beda
+  MVVM: 586bab0227d6fa43271f656535373e539a886575
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UIColor_Hex_Swift: c5ff88470499383b8fd85302d59344bb24ba9436
 
-PODFILE CHECKSUM: afe70330f005133dc264b1c1b342de94cefb6c46
+PODFILE CHECKSUM: e6ed48e4100cb5e682592d6df7c5f4993b739fa5
 
 COCOAPODS: 1.5.2

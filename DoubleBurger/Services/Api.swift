@@ -38,6 +38,18 @@ struct Api {
 
 extension Api {
 
+	static var placeRef: DocumentReference {
+		let placeId = Settings.selectedPlace ?? Keys.defaultId
+		return placesRef.document(placeId)
+	}
+
+	static var placesRef: CollectionReference {
+		return FirestoreHelper.ref(Keys.places)
+	}
+}
+
+extension Api {
+
 	struct Keys {
 
 		static let events = "events"
@@ -45,17 +57,5 @@ extension Api {
 		static let places = "cities"
 		static let timestamp = "timestamp"
 		static let defaultId = "ramenskoe"
-	}
-}
-
-extension Api {
-
-	static var placeRef: DocumentReference {
-		let placeId = Settings.selectedPlace ?? "ramenskoe"
-		return placesRef.document(placeId)
-	}
-
-	static var placesRef: CollectionReference {
-		return FirestoreHelper.ref(Keys.places)
 	}
 }

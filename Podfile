@@ -17,8 +17,13 @@ target 'DoubleBurger' do
 
   pod 'DeckTransition', '~> 2.0'
 
-  pod 'AuthController', :path=>'/Users/ysoftware/Documents/Work/Shared/AuthController-iOS'
-  pod 'FirestoreHelper', :path=>'/Users/ysoftware/Documents/Work/Shared/FirestoreHelper-iOS'
-  pod 'MVVM', :path=>'/Users/ysoftware/Documents/Work/Shared/MVVM-iOS'
+  pod 'FirestoreHelper',
+  :git=>'https://profitprojectsbot:12345678@bitbucket.org/ysoftware/firestorehelper'
+
+  pod 'MVVM',
+  :git=>'https://profitprojectsbot:12345678@bitbucket.org/ysoftware/mvvm.git'
+
+  pod 'AuthController', :branch=>'0.1',
+  :git=>'https://profitprojectsbot:12345678@bitbucket.org/ysoftware/authcontroller.git'
 
 end

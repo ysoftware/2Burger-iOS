@@ -10,11 +10,6 @@ import UIKit
 
 final class TabbarVC: UITabBarController {
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-
-	}
-
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
@@ -23,5 +18,4 @@ final class TabbarVC: UITabBarController {
 					animated: false)
 		}
 	}
-
 }

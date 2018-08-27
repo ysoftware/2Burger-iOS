@@ -1,1 +1,1 @@
-../../../../../../Shared/AuthController-iOS/AuthController/AuthController.h
+../../../AuthController/AuthController/AuthController.h

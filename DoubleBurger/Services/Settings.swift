@@ -45,6 +45,7 @@ extension Settings {
 }
 
 extension Settings {
+	
 	struct Keys {
 		static let firstLaunch = "firstLaunch"
 		static let placeId = "placeId"
