@@ -8,13 +8,14 @@
 
 import Firebase
 import FirestoreHelper
+import Result
 
 struct Api {
 
 	private init() {}
 
 	static func getEvents(with query: PaginationQuery,
-						  _ completion: @escaping (PaginatedResult<[Event]>)->Void) {
+						  _ completion: @escaping (Result<PaginatedResponse<[Event]>, FirestoreHelperError>)->Void) {
 		let request = placeRef.collection(Keys.events).order(by: Keys.timestamp)
 		FirestoreHelper.getList(from: request,
 						  cursor: query.cursor,
@@ -23,7 +24,7 @@ struct Api {
 	}
 
 	static func getOffers(with query: PaginationQuery,
-						  _ completion: @escaping (PaginatedResult<[Offer]>)->Void) {
+						  _ completion: @escaping (Result<PaginatedResponse<[Offer]>, FirestoreHelperError>)->Void) {
 		let request = placeRef.collection(Keys.offers).order(by: Keys.timestamp)
 		FirestoreHelper.getList(from: request,
 								cursor: query.cursor,
@@ -31,7 +32,7 @@ struct Api {
 								completion)
 	}
 
-	static func getPlaces(_ completion: @escaping (Result<[Place]>)->Void) {
+	static func getPlaces(_ completion: @escaping (Result<[Place], FirestoreHelperError>)->Void) {
 		FirestoreHelper.getList(from: placesRef, completion)
 	}
 }

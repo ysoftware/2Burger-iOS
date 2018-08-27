@@ -10,11 +10,11 @@ import MVVM
 import FirebaseFirestore
 import FirestoreHelper
 
-final class PaginationQuery: MVVM.Query {
+final public class PaginationQuery: MVVM.Query {
 
-	var cursor:DocumentSnapshot?
+	public var cursor:DocumentSnapshot?
 
-	func resetPosition() {
+	public func resetPosition() {
 		cursor = nil
 	}
 }

@@ -7,14 +7,15 @@
 //
 
 import MVVM
+import Result
 
 final class PlacesVM: SimpleArrayViewModel<Place, PlaceVM> {
 
-	override func fetchData(_ block: @escaping (Result<[Place]>) -> Void) {
+	override func fetchData(_ block: @escaping (Result<[Place], AnyError>) -> Void) {
 		Api.getPlaces { result in
 			switch result {
-			case .data(let data): block(.data(data))
-			case .error(let error): block(.error(error))
+			case .success(let data): block(.success(data))
+			case .failure(let error): block(.failure(AnyError(error)))
 			}
 		}
 	}

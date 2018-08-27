@@ -7,6 +7,7 @@
 //
 
 import MVVM
+import Result
 
 final class OffersVM: ArrayViewModel<Offer, OfferVM, PaginationQuery> {
 
@@ -16,15 +17,15 @@ final class OffersVM: ArrayViewModel<Offer, OfferVM, PaginationQuery> {
 	}
 
 	override func fetchData(_ query: PaginationQuery?,
-							_ block: @escaping (Result<[Offer]>) -> Void) {
+							_ block: @escaping (Result<[Offer], AnyError>) -> Void) {
 		guard let query = query else { return }
 		Api.getOffers(with: query) { result in
 			switch result {
-			case .data(let data, let cursor):
-				query.cursor = cursor
-				block(.data(data))
-			case .error(let error):
-				block(.error(error))
+			case .success(let response):
+				query.cursor = response.cursor
+				block(.success(response.items))
+			case .failure(let error):
+				block(.failure(AnyError(error)))
 			}
 		}
 	}

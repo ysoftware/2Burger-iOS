@@ -7,6 +7,7 @@
 //
 
 import MVVM
+import Result
 
 final class EventsVM: ArrayViewModel<Event, EventVM, PaginationQuery> {
 
@@ -16,15 +17,15 @@ final class EventsVM: ArrayViewModel<Event, EventVM, PaginationQuery> {
 	}
 
 	override func fetchData(_ query: PaginationQuery?,
-							_ block: @escaping (Result<[Event]>) -> Void) {
+							_ block: @escaping (Result<[Event], AnyError>) -> Void) {
 		guard let query = query else { return }
 		Api.getEvents(with: query) { result in
 			switch result {
-			case .data(let data, let cursor):
-				query.cursor = cursor
-				block(.data(data))
-			case .error(let error):
-				block(.error(error))
+			case .success(let response):
+				query.cursor = response.cursor
+				block(.success(response.items))
+			case .failure(let error):
+				block(.failure(AnyError(error)))
 			}
 		}
 	}
