@@ -9,35 +9,52 @@
 import UIKit
 import MVVM
 
-final class OffersViewController: UIViewController {
+final class MainViewController: UIViewController {
 
-	@IBOutlet weak var tableView:UITableView!
-
-	let viewModel = OffersVM()
-	var viewModelUpdateHandler:ArrayViewModelUpdateHandler!
+	private let tableView = UITableView()
+	
+	private let viewModel = OffersVM()
+	private var viewModelUpdateHandler:ArrayViewModelUpdateHandler!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		setupTableView()
+		setupViewModel()
+	}
 
-		tableView.register(R.nib.offerCell(),
-						   forCellReuseIdentifier: R.reuseIdentifier.offerCell.identifier)
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		presentCitiesVCIfNeeded()
+	}
 
+	private func setupViewModel() {
 		viewModelUpdateHandler = ArrayViewModelUpdateHandler(with: tableView)
 		viewModel.delegate = self
 		viewModel.reloadData()
 	}
 
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
+	private func setupTableView() {
+		view.addSubview(tableView)
+		tableView.translatesAutoresizingMaskIntoConstraints = false
+		tableView.leadingAnchor(equalTo: view.leadingAnchor)
+			.trailingAnchor(equalTo: view.trailingAnchor)
+			.topAnchor(equalTo: view.topAnchor)
+			.bottomAnchor(equalTo: view.bottomAnchor)
 
+		tableView.register(R.nib.offerCell(),
+						   forCellReuseIdentifier: R.reuseIdentifier.offerCell.identifier)
+		tableView.delegate = self
+		tableView.dataSource = self
+	}
+
+	private func presentCitiesVCIfNeeded() {
 		if Settings.selectedPlace == nil {
-			present(R.storyboard.city.cityController()!.inNavigationController,
-					animated: false)
+			present(CitiesViewController().inNavigationController, animated: false)
 		}
 	}
 }
 
-extension OffersViewController: UITableViewDataSource {
+extension MainViewController: UITableViewDataSource {
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return viewModel.numberOfItems
@@ -51,19 +68,19 @@ extension OffersViewController: UITableViewDataSource {
 	}
 }
 
-extension OffersViewController: UITableViewDelegate {
+extension MainViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
 	}
 }
 
-extension OffersViewController: ArrayViewModelDelegate {
+extension MainViewController: ArrayViewModelDelegate {
 
 	func didChangeState(to state: ArrayViewModelState) {
 		switch state {
-		case .error(_):
-			call(message: "Произошла ошибка. Пожалуйста, повторите позже.")
+		case .error(let error):
+			call(message: error.localizedDescription)
 		default:
 			break
 		}

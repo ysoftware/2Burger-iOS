@@ -17,7 +17,6 @@
 		715F6C3D20FD0EFE0045C13D /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 715F6C3C20FD0EFE0045C13D /* CityCell.xib */; };
 		715F6C3F20FD0F4C0045C13D /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F6C3E20FD0F4C0045C13D /* CityCell.swift */; };
 		715F6C4120FD11920045C13D /* City.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715F6C4020FD11920045C13D /* City.storyboard */; };
-		715F6C4520FD11ED0045C13D /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F6C4420FD11ED0045C13D /* TabbarVC.swift */; };
 		715F6C4720FD12A50045C13D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F6C4620FD12A50045C13D /* Extensions.swift */; };
 		7195417920F90B7B008B92CC /* DoubleBurgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7195417820F90B7B008B92CC /* DoubleBurgerTests.swift */; };
 		7195418420F90B7B008B92CC /* DoubleBurgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7195418320F90B7B008B92CC /* DoubleBurgerUITests.swift */; };
@@ -69,7 +68,6 @@
 		715F6C3C20FD0EFE0045C13D /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
 		715F6C3E20FD0F4C0045C13D /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		715F6C4020FD11920045C13D /* City.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = City.storyboard; sourceTree = "<group>"; };
-		715F6C4420FD11ED0045C13D /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		715F6C4620FD12A50045C13D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7195416020F90B78008B92CC /* DoubleBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7195417420F90B7B008B92CC /* DoubleBurgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleBurgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +147,6 @@
 		715F6C3A20FD0E0D0045C13D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				715F6C4420FD11ED0045C13D /* TabbarVC.swift */,
 				71D7495520F94B6500EA1D2F /* CitiesVC.swift */,
 				7109024720FF4B8D007DE01B /* OffersVC.swift */,
 			);
@@ -544,7 +541,6 @@
 				71D7496420F94B6500EA1D2F /* Place.swift in Sources */,
 				71D7496520F94B6500EA1D2F /* OffersVM.swift in Sources */,
 				71D7496820F94B6500EA1D2F /* PlacesVM.swift in Sources */,
-				715F6C4520FD11ED0045C13D /* TabbarVC.swift in Sources */,
 				71D7496320F94B6500EA1D2F /* Event.swift in Sources */,
 				71D7496E20F94B6500EA1D2F /* Api.swift in Sources */,
 				71D7496A20F94B6500EA1D2F /* EventsVM.swift in Sources */,

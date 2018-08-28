@@ -15,7 +15,6 @@ final class CitiesViewController: UIViewController {
 
 	let viewModel = PlacesVM()
 	var viewModelUpdateHandler:ArrayViewModelUpdateHandler!
-	var refreshControl = UIRefreshControl()
 	var selectedIndex = 0
 
 	override func viewDidLoad() {
@@ -23,7 +22,6 @@ final class CitiesViewController: UIViewController {
 
 		tableView.register(R.nib.cityCell(),
 						   forCellReuseIdentifier: R.reuseIdentifier.cityCell.identifier)
-		tableView.refreshControl = refreshControl
 
 		viewModelUpdateHandler = ArrayViewModelUpdateHandler(with: tableView)
 		viewModel.delegate = self
@@ -58,13 +56,10 @@ extension CitiesViewController: UITableViewDelegate {
 extension CitiesViewController: ArrayViewModelDelegate {
 
 	func didChangeState(to state: ArrayViewModelState) {
-		refreshControl.endRefreshing()
 
 		switch state {
-		case .loading:
-			refreshControl.beginRefreshing()
-		case .error(let error):
-			call(message: error.localizedDescription)
+		case .error(_):
+			call(message: "Произошла ошибка. Пожалуйста, повторите позже.")
 		default:
 			break
 		}
