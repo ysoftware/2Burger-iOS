@@ -138,8 +138,8 @@
 		7109024E20FF4C74007DE01B /* OfferCell */ = {
 			isa = PBXGroup;
 			children = (
-				7109024F20FF4C83007DE01B /* OfferCell.swift */,
 				7109025120FF4C8E007DE01B /* OfferCell.xib */,
+				7109024F20FF4C83007DE01B /* OfferCell.swift */,
 			);
 			path = OfferCell;
 			sourceTree = "<group>";

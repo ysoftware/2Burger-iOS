@@ -6,19 +6,60 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2fb-WK-tz9">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2fb-WK-tz9" id="7Md-GJ-0XU">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="ua0-wS-eaa" customClass="NewsCell" customModule="DoubleBurger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="295"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="295"/>
                 <autoresizingMask key="autoresizingMask"/>
-            </tableViewCellContentView>
-            <point key="canvasLocation" x="-25" y="-118"/>
-        </tableViewCell>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label awd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD4-Xh-Dbn">
+                        <rect key="frame" x="18" y="248" width="474" height="39"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38.5" id="Ahk-Ru-FWI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r79-R8-zOR" customClass="RoundedImageView" customModule="DoubleBurger" customModuleProvider="target">
+                        <rect key="frame" x="18" y="8" width="464" height="232"/>
+                        <color key="backgroundColor" red="0.86562499999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="r79-R8-zOR" secondAttribute="height" multiplier="2" id="Euu-hb-nI1"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="0.050000000000000003"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRelativeRadius" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fD4-Xh-Dbn" secondAttribute="bottom" priority="999" constant="8" id="9cG-r9-cUt"/>
+                <constraint firstItem="r79-R8-zOR" firstAttribute="top" secondItem="jQ6-53-cUT" secondAttribute="top" constant="8" id="K00-ma-Fjg"/>
+                <constraint firstAttribute="trailing" secondItem="fD4-Xh-Dbn" secondAttribute="trailing" constant="8" id="M9x-Em-LTP"/>
+                <constraint firstItem="r79-R8-zOR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jQ6-53-cUT" secondAttribute="leading" constant="8" id="ND7-la-lER"/>
+                <constraint firstItem="r79-R8-zOR" firstAttribute="centerX" secondItem="jQ6-53-cUT" secondAttribute="centerX" id="NH3-2c-0eW"/>
+                <constraint firstItem="fD4-Xh-Dbn" firstAttribute="leading" secondItem="r79-R8-zOR" secondAttribute="leading" id="Sc5-HG-kim"/>
+                <constraint firstItem="fD4-Xh-Dbn" firstAttribute="top" secondItem="r79-R8-zOR" secondAttribute="bottom" constant="8" id="cHl-Av-WHA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="jQ6-53-cUT"/>
+            <size key="customSize" width="525" height="329"/>
+            <connections>
+                <outlet property="newsImage" destination="r79-R8-zOR" id="UEl-kj-Hv5"/>
+                <outlet property="titleLabel" destination="fD4-Xh-Dbn" id="vf4-qm-GpK"/>
+            </connections>
+            <point key="canvasLocation" x="-7.5" y="396.5"/>
+        </collectionViewCell>
     </objects>
 </document>

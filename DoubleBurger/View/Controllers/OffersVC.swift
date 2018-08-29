@@ -9,23 +9,16 @@
 import UIKit
 import MVVM
 
-final class OffersViewController: UIViewController {
+final class MainViewController: UIViewController {
 
-	@IBOutlet weak var tableView:UITableView!
+	@IBOutlet weak var newsCollectionView:UICollectionView!
+	@IBOutlet weak var offersCollectionView:UICollectionView!
 
-	let viewModel = OffersVM()
-	var viewModelUpdateHandler:ArrayViewModelUpdateHandler!
+	let offersVM = OffersVM()
+	var offersVMUpdater:ArrayViewModelUpdateHandler!
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-
-		tableView.register(R.nib.offerCell(),
-						   forCellReuseIdentifier: R.reuseIdentifier.offerCell.identifier)
-
-		viewModelUpdateHandler = ArrayViewModelUpdateHandler(with: tableView)
-		viewModel.delegate = self
-		viewModel.reloadData()
-	}
+	let newsVM = EventsVM()
+	var newsVMUpdater:ArrayViewModelUpdateHandler!
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
@@ -34,31 +27,77 @@ final class OffersViewController: UIViewController {
 			present(R.storyboard.city.cityController()!.inNavigationController,
 					animated: false)
 		}
+		else if newsVMUpdater == nil {
+			setupCollectionViews()
+		}
+	}
+
+	private func setupCollectionViews() {
+		offersCollectionView.register(R.nib.offerCell(),
+									  forCellWithReuseIdentifier: R.reuseIdentifier.offerCell.identifier)
+
+		newsCollectionView.register(R.nib.newsCell(),
+									forCellWithReuseIdentifier: R.reuseIdentifier.newsCell.identifier)
+
+		offersVMUpdater = ArrayViewModelUpdateHandler(with: offersCollectionView)
+		offersVM.delegate = self
+		offersVM.reloadData()
+
+		newsVMUpdater = ArrayViewModelUpdateHandler(with: newsCollectionView)
+		newsVM.delegate = self
+		newsVM.reloadData()
 	}
 }
 
-extension OffersViewController: UITableViewDataSource {
+extension MainViewController: UICollectionViewDelegateFlowLayout {
 
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return viewModel.numberOfItems
-	}
-
-	func tableView(_ tableView: UITableView,
-				   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.offerCell.identifier,
-												 for: indexPath) as! OfferCell
-		return cell.setup(with: viewModel.item(at: indexPath.row))
+	func collectionView(_ collectionView: UICollectionView,
+						layout collectionViewLayout: UICollectionViewLayout,
+						sizeForItemAt indexPath: IndexPath) -> CGSize {
+		let width = view.bounds.width - 10
+		let height = width / 1.8
+		return CGSize(width: width, height: height)
 	}
 }
 
-extension OffersViewController: UITableViewDelegate {
+extension MainViewController: UICollectionViewDataSource {
 
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		if collectionView == offersCollectionView {
+			return offersVM.numberOfItems
+		}
+		return newsVM.numberOfItems
+	}
 
+	func collectionView(_ collectionView: UICollectionView,
+						cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		if collectionView == offersCollectionView {
+			return (collectionView
+				.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.offerCell.identifier,
+									 for: indexPath) as! OfferCell)
+				.setup(with: offersVM.item(at: indexPath.row))
+		}
+
+		return (collectionView
+			.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.newsCell.identifier,
+								 for: indexPath) as! NewsCell)
+			.setup(with: newsVM.item(at: indexPath.row))
 	}
 }
 
-extension OffersViewController: ArrayViewModelDelegate {
+extension MainViewController: UICollectionViewDelegate {
+
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		if collectionView == offersCollectionView {
+
+		}
+		else {
+
+		}
+	}
+}
+
+extension MainViewController: ArrayViewModelDelegate {
 
 	func didChangeState(to state: ArrayViewModelState) {
 		switch state {
@@ -73,6 +112,11 @@ extension OffersViewController: ArrayViewModelDelegate {
 								 _ update: Update)
 		where M : Equatable, VM : ViewModel<M>, Q : Query {
 
-			viewModelUpdateHandler.handle(update)
+			if arrayViewModel === offersVM {
+				offersVMUpdater.handle(update)
+			}
+			else {
+				newsVMUpdater.handle(update)
+			}
 	}
 }

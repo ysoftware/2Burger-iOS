@@ -358,10 +358,11 @@ extension UIImage {
     }
 }
 
-final class RoundedImageView: UIImageView {
-    var isRelativeRadius:Bool = false  { didSet { setNeedsLayout() } }
-    var cornerRadius:CGFloat = 0  { didSet { setNeedsLayout() } }
-    
+
+@IBDesignable final class RoundedImageView: UIImageView {
+    @IBInspectable var isRelativeRadius:Bool = false  { didSet { setNeedsLayout() } }
+    @IBInspectable var cornerRadius:CGFloat = 0  { didSet { setNeedsLayout() } }
+
     override func layoutSubviews() {
         super.layoutSubviews()
         

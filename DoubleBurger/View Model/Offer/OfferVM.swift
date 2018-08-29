@@ -23,10 +23,6 @@ final class OfferVM:ViewModel<Offer> {
 		return model?.title ?? ""
 	}
 
-	var text: String {
-		return model?.text ?? ""
-	}
-
 	func setImage(into imageView:UIImageView) {
 		guard let id = model?.id else { return }
 		let ref = Storage.storage().reference(withPath: "offers/\(id)/.jpg")

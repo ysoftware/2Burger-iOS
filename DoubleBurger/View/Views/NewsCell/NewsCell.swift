@@ -8,17 +8,17 @@
 
 import UIKit
 
-final class NewsCell: UITableViewCell {
+final class NewsCell: UICollectionViewCell {
 
 	@IBOutlet weak var newsImage:UIImageView!
 	@IBOutlet weak var titleLabel:UILabel!
-	@IBOutlet weak var contentLabel:UILabel!
+//	@IBOutlet weak var contentLabel:UILabel!
 
-	func setup(with model:EventVM) -> NewsCell {
+	func setup(with vm:EventVM) -> NewsCell {
 
-		model.setImage(into: newsImage)
-		titleLabel.text = model.title
-		contentLabel.text = model.text
+		vm.setImage(into: newsImage)
+		titleLabel.text = vm.title
+//		contentLabel.text = vm.text
 
 		return self
 	}
