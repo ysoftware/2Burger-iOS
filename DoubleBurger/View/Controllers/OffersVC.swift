@@ -54,15 +54,17 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView,
 						layout collectionViewLayout: UICollectionViewLayout,
 						sizeForItemAt indexPath: IndexPath) -> CGSize {
-		let width = view.bounds.width - 10
-		let height = width / 1.8
+		let format:CGFloat = collectionView == newsCollectionView ? 1.75 : 1.8
+		let width = view.bounds.width - 30
+		let height = width / format
 		return CGSize(width: width, height: height)
 	}
 }
 
 extension MainViewController: UICollectionViewDataSource {
 
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+	func collectionView(_ collectionView: UICollectionView,
+						numberOfItemsInSection section: Int) -> Int {
 		if collectionView == offersCollectionView {
 			return offersVM.numberOfItems
 		}
@@ -87,7 +89,8 @@ extension MainViewController: UICollectionViewDataSource {
 
 extension MainViewController: UICollectionViewDelegate {
 
-	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+	func collectionView(_ collectionView: UICollectionView,
+						didSelectItemAt indexPath: IndexPath) {
 		if collectionView == offersCollectionView {
 
 		}

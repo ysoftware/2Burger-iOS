@@ -12,7 +12,7 @@ final class Event: Codable {
 
 	var id = ""
 	var title = ""
-	var text = ""
+	var text:String? = ""
 	var timestamp:Double = 0
 }
 

@@ -92,9 +92,15 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/Presentr/Presentr/AlertViewController.xib"
+  install_resource "${PODS_ROOT}/Presentr/Presentr/Montserrat-Regular.ttf"
+  install_resource "${PODS_ROOT}/Presentr/Presentr/SourceSansPro-Regular.ttf"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/gRPC/gRPCCertificates.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/Presentr/Presentr/AlertViewController.xib"
+  install_resource "${PODS_ROOT}/Presentr/Presentr/Montserrat-Regular.ttf"
+  install_resource "${PODS_ROOT}/Presentr/Presentr/SourceSansPro-Regular.ttf"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/gRPC/gRPCCertificates.bundle"
 fi
 

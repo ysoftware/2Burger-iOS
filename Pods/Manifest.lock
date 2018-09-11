@@ -6,7 +6,6 @@ PODS:
   - BoringSSL/Implementation (10.0.5):
     - BoringSSL/Interface (= 10.0.5)
   - BoringSSL/Interface (10.0.5)
-  - DeckTransition (2.0.0)
   - Firebase/Auth (5.4.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.2)
@@ -100,6 +99,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Presentr (1.3.2)
   - Protobuf (3.6.0)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
@@ -115,7 +115,6 @@ PODS:
 
 DEPENDENCIES:
   - "AuthController (from `https://profitprojectsbot:12345678@bitbucket.org/ysoftware/authcontroller.git`, branch `0.1`)"
-  - DeckTransition (~> 2.0)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
@@ -124,6 +123,7 @@ DEPENDENCIES:
   - FirebaseUI/Storage
   - "FirestoreHelper (from `https://profitprojectsbot:12345678@bitbucket.org/ysoftware/firestorehelper`)"
   - "MVVM (from `https://profitprojectsbot:12345678@bitbucket.org/ysoftware/mvvm.git`)"
+  - Presentr
   - R.swift
   - SDWebImage (~> 4.0)
   - SwiftLocation
@@ -132,7 +132,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BoringSSL
-    - DeckTransition
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -150,6 +149,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - Presentr
     - Protobuf
     - R.swift
     - R.swift.Library
@@ -182,7 +182,6 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AuthController: 24dc6d10c756a68557354c5e2119283b3f387c6c
   BoringSSL: cf3f1793eb6e3c445c4d150456341f149c268a35
-  DeckTransition: 2300694f94fbeca2c103f365dc9dc09ffae14a4f
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
   FirebaseAuth: 096e457cdd4274412a66c4a35874787e411f5a03
@@ -202,6 +201,7 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   MVVM: 586bab0227d6fa43271f656535373e539a886575
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Presentr: 797ae6ec8904eaba4ec58a4c2065bd66e31569ea
   Protobuf: 0fc0ad8bec688b2a3017a139953e01374fedbd5f
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
@@ -211,6 +211,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UIColor_Hex_Swift: c5ff88470499383b8fd85302d59344bb24ba9436
 
-PODFILE CHECKSUM: e6ed48e4100cb5e682592d6df7c5f4993b739fa5
+PODFILE CHECKSUM: 7978100bf8815f3497ea324e7143b81d59146283
 
 COCOAPODS: 1.5.2

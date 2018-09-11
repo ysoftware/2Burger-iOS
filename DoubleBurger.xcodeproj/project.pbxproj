@@ -39,6 +39,7 @@
 		71D7497220F94B6500EA1D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7496020F94B6500EA1D2F /* AppDelegate.swift */; };
 		71D7497320F94B6500EA1D2F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71D7496120F94B6500EA1D2F /* Info.plist */; };
 		71D7497520F94EB200EA1D2F /* PaginationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7497420F94EB200EA1D2F /* PaginationQuery.swift */; };
+		71ED4DB5213D248700958634 /* CodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED4DB4213D248700958634 /* CodeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		71D7496020F94B6500EA1D2F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71D7496120F94B6500EA1D2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71D7497420F94EB200EA1D2F /* PaginationQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationQuery.swift; sourceTree = "<group>"; };
+		71ED4DB4213D248700958634 /* CodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVC.swift; sourceTree = "<group>"; };
 		8D245F7EB3D0AB4D998843DA /* libPods-DoubleBurger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DoubleBurger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4AB7516471BFF7D94FD903 /* Pods-DoubleBurger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubleBurger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoubleBurger/Pods-DoubleBurger.debug.xcconfig"; sourceTree = "<group>"; };
 		DA4CBBDEDD575266D691BFF0 /* Pods-DoubleBurger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubleBurger.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubleBurger/Pods-DoubleBurger.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				71D7495520F94B6500EA1D2F /* CitiesVC.swift */,
 				7109024720FF4B8D007DE01B /* OffersVC.swift */,
+				71ED4DB4213D248700958634 /* CodeVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -156,9 +159,9 @@
 		715F6C3B20FD0E110045C13D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				715F6C4320FD11C60045C13D /* CityCell */,
 				7109024E20FF4C74007DE01B /* OfferCell */,
 				7109024920FF4B91007DE01B /* NewsCell */,
-				715F6C4320FD11C60045C13D /* CityCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -514,10 +517,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DoubleBurger/Pods-DoubleBurger-resources.sh",
+				"${PODS_ROOT}/Presentr/Presentr/AlertViewController.xib",
+				"${PODS_ROOT}/Presentr/Presentr/Montserrat-Regular.ttf",
+				"${PODS_ROOT}/Presentr/Presentr/SourceSansPro-Regular.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC/gRPCCertificates.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AlertViewController.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Montserrat-Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SourceSansPro-Regular.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +558,7 @@
 				71D7496920F94B6500EA1D2F /* EventVM.swift in Sources */,
 				71D7497520F94EB200EA1D2F /* PaginationQuery.swift in Sources */,
 				71D7496220F94B6500EA1D2F /* Offer.swift in Sources */,
+				71ED4DB5213D248700958634 /* CodeVC.swift in Sources */,
 				71D7496D20F94B6500EA1D2F /* Settings.swift in Sources */,
 				71D7496620F94B6500EA1D2F /* OfferVM.swift in Sources */,
 				7109025020FF4C83007DE01B /* OfferCell.swift in Sources */,

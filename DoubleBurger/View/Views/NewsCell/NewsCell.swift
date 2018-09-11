@@ -12,13 +12,11 @@ final class NewsCell: UICollectionViewCell {
 
 	@IBOutlet weak var newsImage:UIImageView!
 	@IBOutlet weak var titleLabel:UILabel!
-//	@IBOutlet weak var contentLabel:UILabel!
 
 	func setup(with vm:EventVM) -> NewsCell {
 
 		vm.setImage(into: newsImage)
-		titleLabel.text = vm.title
-//		contentLabel.text = vm.text
+		titleLabel.text = vm.text
 
 		return self
 	}

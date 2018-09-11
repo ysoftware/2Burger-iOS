@@ -20,7 +20,7 @@ final class EventVM:ViewModel<Event> {
 	// MARK: - View properties
 
 	var title: String {
-		return model?.title ?? ""
+		return model?.title.replacingOccurrences(of: "\\n", with: "\n") ?? ""
 	}
 
 	var date: String {
@@ -30,12 +30,12 @@ final class EventVM:ViewModel<Event> {
 	}
 
 	var text: String {
-		return model?.text ?? ""
+		return model?.text?.replacingOccurrences(of: "\\n", with: "\n") ?? ""
 	}
 
 	func setImage(into imageView:UIImageView) {
 		guard let id = model?.id else { return }
-		let ref = Storage.storage().reference(withPath: "events/\(id)/.jpg")
+		let ref = Storage.storage().reference(withPath: "events/\(id).jpg")
 		imageView.sd_setImage(with: ref)
 	}
 }

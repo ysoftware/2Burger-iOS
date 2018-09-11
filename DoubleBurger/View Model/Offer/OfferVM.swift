@@ -20,12 +20,24 @@ final class OfferVM:ViewModel<Offer> {
 	// MARK: - View properties
 
 	var title: String {
-		return model?.title ?? ""
+		return model?.title.replacingOccurrences(of: "\\n", with: "\n") ?? ""
+	}
+
+	var oldPrice: String {
+		return model?.oldPrice ?? ""
+	}
+
+	var newPrice: String {
+		return model?.newPrice ?? ""
+	}
+
+	var shouldCrossOldPrice:Bool {
+		return model?.oldPrice != nil
 	}
 
 	func setImage(into imageView:UIImageView) {
 		guard let id = model?.id else { return }
-		let ref = Storage.storage().reference(withPath: "offers/\(id)/.jpg")
+		let ref = Storage.storage().reference(withPath: "offers/\(id).jpg")
 		imageView.sd_setImage(with: ref)
 	}
 }

@@ -15,7 +15,7 @@ target 'DoubleBurger' do
   pod 'SwiftLocation'
   pod 'UIColor_Hex_Swift', '~> 4.0.1'
 
-  pod 'DeckTransition', '~> 2.0'
+  pod 'Presentr'
 
   pod 'FirestoreHelper',
   :git=>'https://profitprojectsbot:12345678@bitbucket.org/ysoftware/firestorehelper'
