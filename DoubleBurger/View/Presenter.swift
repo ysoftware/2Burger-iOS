@@ -14,7 +14,7 @@ final class Presenter {
 	private static func presenter(_ height:ModalSize) -> Presentr {
 		let type = PresentationType.custom(width: .full, height: height, center: .bottomCenter)
 		let presenter = Presentr(presentationType: type)
-		presenter.blurBackground = true
+		presenter.blurBackground = false
 		presenter.blurStyle = .light
 		presenter.roundCorners = true
 		presenter.backgroundColor = .white
@@ -32,8 +32,9 @@ final class Presenter {
 		viewController.customPresentViewController(p, viewController: vc, animated: true)
 	}
 
-	static func presentOffer(_ offer:OfferVM, in viewController:UIViewController) {
+	static func presentOffer(_ offerVM:OfferVM, in viewController:UIViewController) {
 		let vc = R.storyboard.main.codeVC()!
+		vc.offerVM = offerVM
 		let p = presenter(.half)
 		viewController.customPresentViewController(p, viewController: vc, animated: true)
 	}

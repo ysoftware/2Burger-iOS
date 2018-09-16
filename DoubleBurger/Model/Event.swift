@@ -11,9 +11,10 @@ import Foundation
 final class Event: Codable {
 
 	var id = ""
-	var title = ""
-	var text:String? = ""
 	var timestamp:Double = 0
+	
+	var title:String?
+	var text:String?
 }
 
 extension Event: Equatable {

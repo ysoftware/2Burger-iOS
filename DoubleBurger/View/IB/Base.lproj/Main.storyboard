@@ -143,9 +143,82 @@
                     <view key="view" contentMode="scaleToFill" id="k2e-L1-nmt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVp-Dz-NJF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrI-ka-gSl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="426"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dBS-H7-dht">
+                                                <rect key="frame" x="20" y="20" width="335" height="386"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дарим Бургер бесплатно!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRK-IM-98x">
+                                                        <rect key="frame" x="63.5" y="0.0" width="208.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AWa-f2-SQg">
+                                                        <rect key="frame" x="47.5" y="30.5" width="240" height="120"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="X7S-YP-lPR"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1038" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqY-xl-6tV">
+                                                        <rect key="frame" x="128" y="160.5" width="79.5" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwE-52-kml">
+                                                        <rect key="frame" x="0.0" y="206.5" width="335" height="179.5"/>
+                                                        <mutableString key="text">Хочешь бургер бесплатно? 😏
+
+1. Зарегистрируйся на сайте ramenskoe.2burger.ru, войди под своим логином.
+2. Положи в корзину товары на минимальную сумму доставки.
+3. Введи в корзине промокод 303, не забудь нажать галочку, бургер добавится в корзину.
+4. Оформи заказ и наслаждайся самыми сочными бургерами города.</mutableString>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="dBS-H7-dht" secondAttribute="bottom" constant="20" id="CHf-gt-nRH"/>
+                                            <constraint firstAttribute="trailing" secondItem="dBS-H7-dht" secondAttribute="trailing" constant="20" id="Uz9-qK-PN4"/>
+                                            <constraint firstItem="dBS-H7-dht" firstAttribute="top" secondItem="zrI-ka-gSl" secondAttribute="top" constant="20" id="fNw-sZ-etl"/>
+                                            <constraint firstItem="dBS-H7-dht" firstAttribute="leading" secondItem="zrI-ka-gSl" secondAttribute="leading" constant="20" id="fXk-nv-CPQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zrI-ka-gSl" firstAttribute="centerX" secondItem="aVp-Dz-NJF" secondAttribute="centerX" id="6u2-t8-Q6s"/>
+                                    <constraint firstItem="zrI-ka-gSl" firstAttribute="top" secondItem="aVp-Dz-NJF" secondAttribute="top" id="FP4-eD-n7H"/>
+                                    <constraint firstItem="zrI-ka-gSl" firstAttribute="leading" secondItem="aVp-Dz-NJF" secondAttribute="leading" id="gsA-NJ-gJm"/>
+                                    <constraint firstAttribute="bottom" secondItem="zrI-ka-gSl" secondAttribute="bottom" id="s4g-op-PmR"/>
+                                    <constraint firstAttribute="trailing" secondItem="zrI-ka-gSl" secondAttribute="trailing" id="zYc-Ar-gSs"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aVp-Dz-NJF" firstAttribute="leading" secondItem="Rek-el-ldH" secondAttribute="leading" id="6UJ-DM-FKa"/>
+                            <constraint firstItem="aVp-Dz-NJF" firstAttribute="top" secondItem="Rek-el-ldH" secondAttribute="top" id="R80-XX-Ur1"/>
+                            <constraint firstItem="Rek-el-ldH" firstAttribute="trailing" secondItem="aVp-Dz-NJF" secondAttribute="trailing" id="eBo-k6-P1u"/>
+                            <constraint firstItem="Rek-el-ldH" firstAttribute="bottom" secondItem="aVp-Dz-NJF" secondAttribute="bottom" id="g0d-dn-FOm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rek-el-ldH"/>
                     </view>
+                    <connections>
+                        <outlet property="codeLabel" destination="LqY-xl-6tV" id="Md2-ID-FXA"/>
+                        <outlet property="descriptionLabel" destination="JwE-52-kml" id="nzq-BB-vi3"/>
+                        <outlet property="offerImage" destination="AWa-f2-SQg" id="T16-VF-ujc"/>
+                        <outlet property="titleLabel" destination="aRK-IM-98x" id="KbF-JY-uBw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gY8-1V-KA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,10 +11,10 @@ import Foundation
 final class Offer: Codable {
 
 	var id = ""
-	var title = ""
 	var timestamp:Double = 0
-	var isActive:Bool? = false
 
+	var title:String?
+	var description:String?
 	var promoCode:String? = ""
 	var oldPrice:String? = ""
 	var newPrice:String? = ""

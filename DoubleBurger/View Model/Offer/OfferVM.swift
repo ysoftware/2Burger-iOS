@@ -20,7 +20,15 @@ final class OfferVM:ViewModel<Offer> {
 	// MARK: - View properties
 
 	var title: String {
-		return model?.title.replacingOccurrences(of: "\\n", with: "\n") ?? ""
+		return model?.title?.replacingOccurrences(of: "\\n", with: "\n") ?? ""
+	}
+
+	var description: String {
+		return model?.description?.replacingOccurrences(of: "\\n", with: "\n") ?? ""
+	}
+
+	var promoCode: String {
+		return model?.promoCode?.replacingOccurrences(of: "\\n", with: "\n") ?? ""
 	}
 
 	var oldPrice: String {

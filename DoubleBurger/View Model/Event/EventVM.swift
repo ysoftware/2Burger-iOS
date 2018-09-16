@@ -20,7 +20,7 @@ final class EventVM:ViewModel<Event> {
 	// MARK: - View properties
 
 	var title: String {
-		return model?.title.replacingOccurrences(of: "\\n", with: "\n") ?? ""
+		return model?.title?.replacingOccurrences(of: "\\n", with: "\n") ?? ""
 	}
 
 	var date: String {
