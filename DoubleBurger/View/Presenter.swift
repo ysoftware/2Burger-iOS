@@ -14,4 +14,8 @@ final class Presenter {
 		let vc = R.storyboard.city.cityController()!.inNavigationController
 		viewController.present(vc, animated: animated)
 	}
+
+	static func presentContacts(in viewController:UIViewController) {
+		
+	}
 }

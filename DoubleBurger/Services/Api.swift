@@ -12,7 +12,9 @@ import Result
 
 struct Api {
 
-	private init() {}
+	private init() { }
+
+	// MARK: - Methods
 
 	static func getEvents(with query: PaginationQuery,
 						  _ completion: @escaping (Result<PaginatedResponse<[Event]>, FirestoreHelperError>)->Void) {
@@ -34,6 +36,16 @@ struct Api {
 
 	static func getPlaces(_ completion: @escaping (Result<[Place], FirestoreHelperError>)->Void) {
 		FirestoreHelper.getList(from: placesRef, completion)
+	}
+
+	static func getPlace(id:String, _ completion: @escaping (Place?)->Void) {
+		FirestoreHelper.get(from: placesRef.document(id)) {
+			(result:Result<Place, FirestoreHelperError>) in
+			switch result {
+			case .success(let place): completion(place)
+			case .failure(_): completion(nil)
+			}
+		}
 	}
 }
 

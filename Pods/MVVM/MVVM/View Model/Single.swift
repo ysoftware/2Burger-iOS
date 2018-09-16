@@ -11,6 +11,8 @@ import Foundation
 /// Основной класс для управления данными.
 open class ViewModel<M:Equatable> {
 
+	public required init() { }
+
 	public required init(_ model:M, arrayDelegate:ViewModelDelegate? = nil) {
 		self.arrayDelegate = arrayDelegate
 		self.model = model

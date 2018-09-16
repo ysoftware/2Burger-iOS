@@ -10,6 +10,13 @@ import MVVM
 
 final class PlaceVM:ViewModel<Place> {
 
+	func load(id:String) {
+		Api.getPlace(id: id) { place in
+			self.model = place
+			self.notifyUpdated()
+		}
+	}
+
 	var id:String {
 		return model?.id ?? ""
 	}

@@ -11,17 +11,37 @@ import MVVM
 
 final class MainViewController: UIViewController {
 
+	// MARK: - Outlets
+
+	@IBOutlet weak var cityButton: UIButton!
 	@IBOutlet weak var newsCollectionView:UICollectionView!
 	@IBOutlet weak var offersCollectionView:UICollectionView!
 
-	let offersVM = OffersVM()
-	var offersVMUpdater:ArrayViewModelUpdateHandler!
+	// MARK: - Properties
 
+	let placeVM = PlaceVM()
+	let offersVM = OffersVM()
 	let newsVM = EventsVM()
 	var newsVMUpdater:ArrayViewModelUpdateHandler!
+	var offersVMUpdater:ArrayViewModelUpdateHandler!
+
+	var loadedPlace:String?
+
+	// MARK: - Actions
+
+	@IBAction func contactsTapped(_ sender: Any) {
+		
+	}
 
 	@IBAction func cityTapped(_ sender: Any) {
 		Presenter.presentCities(in: self)
+	}
+
+	// MARK: - Methods
+
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		setup()
 	}
 
 	override func viewDidAppear(_ animated: Bool) {
@@ -30,18 +50,29 @@ final class MainViewController: UIViewController {
 		if Settings.selectedPlace == nil {
 			Presenter.presentCities(in: self, animated: false)
 		}
-		else if newsVMUpdater == nil {
+		else if loadedPlace != Settings.selectedPlace {
+			loadedPlace = Settings.selectedPlace
 			setupCollectionViews()
+			setupCity()
 		}
 	}
 
-	private func setupCollectionViews() {
+	private func setup() {
+		placeVM.delegate = self
+
 		offersCollectionView.register(R.nib.offerCell(),
 									  forCellWithReuseIdentifier: R.reuseIdentifier.offerCell.identifier)
 
 		newsCollectionView.register(R.nib.newsCell(),
 									forCellWithReuseIdentifier: R.reuseIdentifier.newsCell.identifier)
+	}
 
+	private func setupCity() {
+		guard let id = Settings.selectedPlace else { return }
+		placeVM.load(id: id)
+	}
+
+	private func setupCollectionViews() {
 		offersVMUpdater = ArrayViewModelUpdateHandler(with: offersCollectionView)
 		offersVM.delegate = self
 		offersVM.reloadData()
@@ -49,6 +80,15 @@ final class MainViewController: UIViewController {
 		newsVMUpdater = ArrayViewModelUpdateHandler(with: newsCollectionView)
 		newsVM.delegate = self
 		newsVM.reloadData()
+	}
+}
+
+extension MainViewController: ViewModelDelegate {
+
+	func didUpdateData<M>(_ viewModel: ViewModel<M>) where M : Equatable {
+		if viewModel is PlaceVM {
+			cityButton.setTitle(placeVM.name, for: .normal)
+		}
 	}
 }
 

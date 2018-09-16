@@ -26,9 +26,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuN-OZ-sBW">
-                                                <rect key="frame" x="10" y="10" width="83" height="30"/>
+                                                <rect key="frame" x="10" y="10" width="30" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <state key="normal" title="Раменское">
+                                                <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -41,6 +41,9 @@
                                                 <state key="normal" title="Контакты">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="contactsTapped:" destination="uJ9-Ju-Fii" eventType="touchUpInside" id="xoW-ZY-fQ6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,6 +127,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Weg-Yr-2tJ"/>
                     <connections>
+                        <outlet property="cityButton" destination="BuN-OZ-sBW" id="kB6-64-a93"/>
                         <outlet property="newsCollectionView" destination="Pob-Fc-RaB" id="njn-JW-XE0"/>
                         <outlet property="offersCollectionView" destination="UW4-hH-kZ5" id="gZV-Bg-NKd"/>
                     </connections>
