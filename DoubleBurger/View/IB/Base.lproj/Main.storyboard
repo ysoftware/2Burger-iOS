@@ -31,6 +31,9 @@
                                                 <state key="normal" title="Раменское">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="cityTapped:" destination="uJ9-Ju-Fii" eventType="touchUpInside" id="hnB-hl-7Ov"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcs-w1-mew">
                                                 <rect key="frame" x="293" y="10" width="72" height="30"/>

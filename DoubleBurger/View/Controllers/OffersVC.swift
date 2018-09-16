@@ -20,12 +20,15 @@ final class MainViewController: UIViewController {
 	let newsVM = EventsVM()
 	var newsVMUpdater:ArrayViewModelUpdateHandler!
 
+	@IBAction func cityTapped(_ sender: Any) {
+		Presenter.presentCities(in: self)
+	}
+
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
 		if Settings.selectedPlace == nil {
-			present(R.storyboard.city.cityController()!.inNavigationController,
-					animated: false)
+			Presenter.presentCities(in: self, animated: false)
 		}
 		else if newsVMUpdater == nil {
 			setupCollectionViews()
