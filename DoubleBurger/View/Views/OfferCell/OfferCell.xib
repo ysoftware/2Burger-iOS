@@ -25,11 +25,8 @@
                         <rect key="frame" x="10" y="10" width="280" height="130"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PJk-fe-iNg" customClass="RoundedImageView" customModule="DoubleBurger" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="195" height="130"/>
-                                <color key="backgroundColor" red="0.86562499999999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="PJk-fe-iNg" secondAttribute="height" multiplier="1.5" id="FhN-5W-SfU"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="130"/>
+                                <color key="backgroundColor" white="0.88655598960000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="0.050000000000000003"/>
@@ -37,7 +34,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isRelativeRadius" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxR-tH-MWh">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxR-tH-MWh">
                                 <rect key="frame" x="56.5" y="-10" width="233.5" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal" translatesAutoresizingMaskIntoConstraints="NO" id="7gl-0C-IpM">
@@ -113,6 +110,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="PJk-fe-iNg" secondAttribute="bottom" id="LTO-Zf-r3b"/>
                             <constraint firstItem="PJk-fe-iNg" firstAttribute="top" secondItem="ju2-Vo-i3I" secondAttribute="top" id="eZa-4Z-B5i"/>
+                            <constraint firstAttribute="trailing" secondItem="PJk-fe-iNg" secondAttribute="trailing" id="gvt-AD-3p8"/>
                             <constraint firstItem="PJk-fe-iNg" firstAttribute="leading" secondItem="ju2-Vo-i3I" secondAttribute="leading" id="ybp-Tj-XUr"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
