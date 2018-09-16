@@ -38,7 +38,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxR-tH-MWh">
-                                <rect key="frame" x="105.5" y="-10" width="184.5" height="150"/>
+                                <rect key="frame" x="56.5" y="-10" width="233.5" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diagonal" translatesAutoresizingMaskIntoConstraints="NO" id="7gl-0C-IpM">
                                         <rect key="frame" x="0.0" y="0.0" width="57" height="150"/>
@@ -47,32 +47,32 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0C-3Y-up6" userLabel="background">
-                                        <rect key="frame" x="56" y="0.0" width="128.5" height="150"/>
+                                        <rect key="frame" x="56" y="0.0" width="177.5" height="150"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khN-Z6-1DO">
-                                        <rect key="frame" x="50" y="10" width="114.5" height="118"/>
+                                        <rect key="frame" x="50" y="10" width="163.5" height="154"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="awds" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZV-Bd-uos">
-                                                <rect key="frame" x="0.0" y="0.0" width="114.5" height="36"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Дарим бургеры бесплатно!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4ZV-Bd-uos">
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="72"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="250 руб." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZM-js-SCw">
-                                                <rect key="frame" x="35" y="46" width="79.5" height="21.5"/>
+                                                <rect key="frame" x="84" y="82" width="79.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="189 руб." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGr-Mb-8oc">
-                                                <rect key="frame" x="0.0" y="75.5" width="114.5" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="111.5" width="163.5" height="32.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" verticalHuggingPriority="251" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="JDI-ji-aDA">
-                                                <rect key="frame" x="35" y="46" width="80" height="22"/>
+                                                <rect key="frame" x="84" y="82" width="80" height="22"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,6 +82,7 @@
                                             <constraint firstItem="rGr-Mb-8oc" firstAttribute="top" secondItem="QZM-js-SCw" secondAttribute="bottom" constant="8" id="25f-g3-w4r"/>
                                             <constraint firstAttribute="trailing" secondItem="rGr-Mb-8oc" secondAttribute="trailing" id="Cax-ND-x78"/>
                                             <constraint firstItem="JDI-ji-aDA" firstAttribute="top" secondItem="QZM-js-SCw" secondAttribute="top" id="WoY-GU-y5g"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="170" id="YXg-vL-Bui"/>
                                             <constraint firstItem="JDI-ji-aDA" firstAttribute="centerX" secondItem="QZM-js-SCw" secondAttribute="centerX" id="dQV-tm-vcU"/>
                                             <constraint firstItem="4ZV-Bd-uos" firstAttribute="leading" secondItem="khN-Z6-1DO" secondAttribute="leading" id="eGI-X1-KVp"/>
                                             <constraint firstAttribute="trailing" secondItem="QZM-js-SCw" secondAttribute="trailing" id="m6J-MH-J0A"/>

@@ -148,10 +148,10 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrI-ka-gSl">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="426"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="307.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dBS-H7-dht">
-                                                <rect key="frame" x="20" y="20" width="335" height="386"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dBS-H7-dht">
+                                                <rect key="frame" x="20" y="20" width="335" height="267.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дарим Бургер бесплатно!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRK-IM-98x">
                                                         <rect key="frame" x="63.5" y="0.0" width="208.5" height="20.5"/>
@@ -160,29 +160,25 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AWa-f2-SQg">
-                                                        <rect key="frame" x="47.5" y="30.5" width="240" height="120"/>
+                                                        <rect key="frame" x="47.5" y="35.5" width="240" height="120"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="120" id="X7S-YP-lPR"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1038" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqY-xl-6tV">
-                                                        <rect key="frame" x="128" y="160.5" width="79.5" height="36"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                                        <rect key="frame" x="115" y="170.5" width="105.5" height="48"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwE-52-kml">
-                                                        <rect key="frame" x="0.0" y="206.5" width="335" height="179.5"/>
-                                                        <mutableString key="text">Хочешь бургер бесплатно? 😏
-
-1. Зарегистрируйся на сайте ramenskoe.2burger.ru, войди под своим логином.
-2. Положи в корзину товары на минимальную сумму доставки.
-3. Введи в корзине промокод 303, не забудь нажать галочку, бургер добавится в корзину.
-4. Оформи заказ и наслаждайся самыми сочными бургерами города.</mutableString>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="dfg" translatesAutoresizingMaskIntoConstraints="NO" id="nRA-MH-S9u">
+                                                        <rect key="frame" x="151" y="233.5" width="33" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                                    </textView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -215,7 +211,7 @@
                     </view>
                     <connections>
                         <outlet property="codeLabel" destination="LqY-xl-6tV" id="Md2-ID-FXA"/>
-                        <outlet property="descriptionLabel" destination="JwE-52-kml" id="nzq-BB-vi3"/>
+                        <outlet property="descriptionLabel" destination="nRA-MH-S9u" id="eJY-e8-leY"/>
                         <outlet property="offerImage" destination="AWa-f2-SQg" id="T16-VF-ujc"/>
                         <outlet property="titleLabel" destination="aRK-IM-98x" id="KbF-JY-uBw"/>
                     </connections>
