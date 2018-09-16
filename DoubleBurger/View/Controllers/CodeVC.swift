@@ -9,5 +9,7 @@
 import UIKit
 
 final class CodeVC: UIViewController {
-	
+
+	var offer:OfferVM!
+
 }

@@ -151,6 +151,56 @@
             </objects>
             <point key="canvasLocation" x="2766" y="-568"/>
         </scene>
+        <!--Cities View Controller-->
+        <scene sceneID="OEL-OM-lb4">
+            <objects>
+                <viewController storyboardIdentifier="CityController" id="B4x-6a-hdU" customClass="CitiesViewController" customModule="DoubleBurger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3P5-YG-BWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iso-Ao-hH5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="B4x-6a-hdU" id="xpa-uv-pvl"/>
+                                    <outlet property="delegate" destination="B4x-6a-hdU" id="BJ6-Iw-cFQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Igt-DC-hkc" firstAttribute="bottom" secondItem="Iso-Ao-hH5" secondAttribute="bottom" id="7IB-Uj-Ahw"/>
+                            <constraint firstItem="Igt-DC-hkc" firstAttribute="trailing" secondItem="Iso-Ao-hH5" secondAttribute="trailing" id="Ko3-LD-pQy"/>
+                            <constraint firstItem="Iso-Ao-hH5" firstAttribute="top" secondItem="Igt-DC-hkc" secondAttribute="top" id="bTB-lT-GFd"/>
+                            <constraint firstItem="Iso-Ao-hH5" firstAttribute="leading" secondItem="Igt-DC-hkc" secondAttribute="leading" id="j8j-P4-AjV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Igt-DC-hkc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pyg-5y-WLL"/>
+                    <connections>
+                        <outlet property="tableView" destination="Iso-Ao-hH5" id="ZPc-Ej-wJM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kv9-nq-DsO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015" y="-1266"/>
+        </scene>
+        <!--Contacts View Controller-->
+        <scene sceneID="FYM-BR-V35">
+            <objects>
+                <viewController storyboardIdentifier="ContactsViewController" id="46t-jN-XAW" customClass="ContactsViewController" customModule="DoubleBurger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sNl-LF-9rr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="U9D-wx-9XB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQe-8E-Ru2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2766" y="-1266"/>
+        </scene>
     </scenes>
     <resources>
         <image name="logo" width="170" height="110"/>

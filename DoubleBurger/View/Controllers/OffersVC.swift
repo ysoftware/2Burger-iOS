@@ -30,7 +30,7 @@ final class MainViewController: UIViewController {
 	// MARK: - Actions
 
 	@IBAction func contactsTapped(_ sender: Any) {
-		
+		Presenter.presentContacts(in: self)
 	}
 
 	@IBAction func cityTapped(_ sender: Any) {
@@ -135,7 +135,7 @@ extension MainViewController: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView,
 						didSelectItemAt indexPath: IndexPath) {
 		if collectionView == offersCollectionView {
-
+			Presenter.presentOffer(offersVM.item(at: indexPath.row), in: self)
 		}
 		else {
 

@@ -14,10 +14,10 @@
 		7109025020FF4C83007DE01B /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7109024F20FF4C83007DE01B /* OfferCell.swift */; };
 		7109025220FF4C8E007DE01B /* OfferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7109025120FF4C8E007DE01B /* OfferCell.xib */; };
 		7124EE91214E589E00C8CA99 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7124EE90214E589E00C8CA99 /* Presenter.swift */; };
+		7124EE93214E694700C8CA99 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7124EE92214E694700C8CA99 /* ContactsVC.swift */; };
 		715F6C3920FD0C030045C13D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F6C3820FD0C030045C13D /* R.generated.swift */; };
 		715F6C3D20FD0EFE0045C13D /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 715F6C3C20FD0EFE0045C13D /* CityCell.xib */; };
 		715F6C3F20FD0F4C0045C13D /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F6C3E20FD0F4C0045C13D /* CityCell.swift */; };
-		715F6C4120FD11920045C13D /* City.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715F6C4020FD11920045C13D /* City.storyboard */; };
 		715F6C4720FD12A50045C13D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715F6C4620FD12A50045C13D /* Extensions.swift */; };
 		7195417920F90B7B008B92CC /* DoubleBurgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7195417820F90B7B008B92CC /* DoubleBurgerTests.swift */; };
 		7195418420F90B7B008B92CC /* DoubleBurgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7195418320F90B7B008B92CC /* DoubleBurgerUITests.swift */; };
@@ -67,10 +67,10 @@
 		7109024F20FF4C83007DE01B /* OfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
 		7109025120FF4C8E007DE01B /* OfferCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCell.xib; sourceTree = "<group>"; };
 		7124EE90214E589E00C8CA99 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		7124EE92214E694700C8CA99 /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
 		715F6C3820FD0C030045C13D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		715F6C3C20FD0EFE0045C13D /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
 		715F6C3E20FD0F4C0045C13D /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
-		715F6C4020FD11920045C13D /* City.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = City.storyboard; sourceTree = "<group>"; };
 		715F6C4620FD12A50045C13D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7195416020F90B78008B92CC /* DoubleBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7195417420F90B7B008B92CC /* DoubleBurgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleBurgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +154,7 @@
 				71D7495520F94B6500EA1D2F /* CitiesVC.swift */,
 				7109024720FF4B8D007DE01B /* OffersVC.swift */,
 				71ED4DB4213D248700958634 /* CodeVC.swift */,
+				7124EE92214E694700C8CA99 /* ContactsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,7 +172,6 @@
 		715F6C4220FD119E0045C13D /* IB */ = {
 			isa = PBXGroup;
 			children = (
-				715F6C4020FD11920045C13D /* City.storyboard */,
 				71D7495620F94B6500EA1D2F /* Main.storyboard */,
 			);
 			path = IB;
@@ -457,7 +457,6 @@
 				7109025220FF4C8E007DE01B /* OfferCell.xib in Resources */,
 				7109024B20FF4B9C007DE01B /* NewsCell.xib in Resources */,
 				71D7497120F94B6500EA1D2F /* LaunchScreen.storyboard in Resources */,
-				715F6C4120FD11920045C13D /* City.storyboard in Resources */,
 				71D7496C20F94B6500EA1D2F /* Main.storyboard in Resources */,
 				71D7497320F94B6500EA1D2F /* Info.plist in Resources */,
 				71D7497020F94B6500EA1D2F /* GoogleService-Info.plist in Resources */,
@@ -560,6 +559,7 @@
 				71D7497220F94B6500EA1D2F /* AppDelegate.swift in Sources */,
 				7109024D20FF4BA5007DE01B /* NewsCell.swift in Sources */,
 				71D7496920F94B6500EA1D2F /* EventVM.swift in Sources */,
+				7124EE93214E694700C8CA99 /* ContactsVC.swift in Sources */,
 				71D7497520F94EB200EA1D2F /* PaginationQuery.swift in Sources */,
 				71D7496220F94B6500EA1D2F /* Offer.swift in Sources */,
 				71ED4DB5213D248700958634 /* CodeVC.swift in Sources */,

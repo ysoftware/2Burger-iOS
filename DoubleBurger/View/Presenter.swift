@@ -7,15 +7,34 @@
 //
 
 import UIKit
+import Presentr
 
 final class Presenter {
 
+	private static func presenter(_ height:ModalSize) -> Presentr {
+		let type = PresentationType.custom(width: .full, height: height, center: .bottomCenter)
+		let presenter = Presentr(presentationType: type)
+		presenter.blurBackground = true
+		presenter.blurStyle = .light
+		presenter.roundCorners = true
+		presenter.backgroundColor = .white
+		return presenter
+	}
+
 	static func presentCities(in viewController:UIViewController, animated:Bool = true) {
-		let vc = R.storyboard.city.cityController()!.inNavigationController
+		let vc = R.storyboard.main.cityController()!.inNavigationController
 		viewController.present(vc, animated: animated)
 	}
 
 	static func presentContacts(in viewController:UIViewController) {
-		
+		let vc = R.storyboard.main.contactsViewController()!
+		let p = presenter(.full)
+		viewController.customPresentViewController(p, viewController: vc, animated: true)
+	}
+
+	static func presentOffer(_ offer:OfferVM, in viewController:UIViewController) {
+		let vc = R.storyboard.main.codeVC()!
+		let p = presenter(.half)
+		viewController.customPresentViewController(p, viewController: vc, animated: true)
 	}
 }
