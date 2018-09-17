@@ -49,7 +49,7 @@ extension CitiesViewController: UITableViewDelegate {
 
 		let city = viewModel.item(at: indexPath.row)
 		Settings.set(selectedPlace: city.id)
-		dismiss()
+		dismiss(animated: true)
 	}
 }
 
