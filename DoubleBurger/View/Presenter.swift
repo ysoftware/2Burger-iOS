@@ -14,10 +14,10 @@ final class Presenter {
 	private static func presenter(_ height:ModalSize) -> Presentr {
 		let type = PresentationType.custom(width: .full, height: height, center: .bottomCenter)
 		let presenter = Presentr(presentationType: type)
-		presenter.blurBackground = true
-		presenter.blurStyle = .light
+		presenter.blurBackground = false
 		presenter.roundCorners = true
-		presenter.backgroundColor = .white
+		presenter.backgroundColor = .black
+		presenter.backgroundOpacity = 0.5
 		return presenter
 	}
 

@@ -14,7 +14,7 @@ final class Offer: Codable {
 	var timestamp:Double = 0
 
 	var title:String?
-	var description:String?
+	var text:String?
 	var promoCode:String? = ""
 	var oldPrice:String? = ""
 	var newPrice:String? = ""

@@ -181,12 +181,12 @@
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nRA-MH-S9u">
                                                         <rect key="frame" x="0.0" y="233.5" width="335" height="195.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <mutableString key="text">Хочешь бургер бесплатно? 
+                                                        <string key="text">Хочешь бургер бесплатно? 
 
 1. Зарегистрируйся на сайте ramenskoe.2burger.ru, войди под своим логином.
 2. Положи в корзину товары на минимальную сумму доставки.
 3. Введи в корзине промокод 303, не забудь нажать галочку, бургер добавится в корзину.
-4. Оформи заказ и наслаждайся самыми сочными бургерами города.</mutableString>
+4. Оформи заказ и наслаждайся самыми сочными бургерами города.</string>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -233,7 +233,7 @@
             </objects>
             <point key="canvasLocation" x="2766" y="-568"/>
         </scene>
-        <!--Cities View Controller-->
+        <!--Выберите ваш город-->
         <scene sceneID="OEL-OM-lb4">
             <objects>
                 <viewController storyboardIdentifier="CityController" id="B4x-6a-hdU" customClass="CitiesViewController" customModule="DoubleBurger" customModuleProvider="target" sceneMemberID="viewController">
@@ -259,7 +259,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Igt-DC-hkc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Pyg-5y-WLL"/>
+                    <navigationItem key="navigationItem" title="Выберите ваш город" id="Pyg-5y-WLL"/>
                     <connections>
                         <outlet property="tableView" destination="Iso-Ao-hH5" id="ZPc-Ej-wJM"/>
                     </connections>

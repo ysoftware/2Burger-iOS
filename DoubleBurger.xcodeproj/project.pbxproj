@@ -169,14 +169,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		715F6C4220FD119E0045C13D /* IB */ = {
-			isa = PBXGroup;
-			children = (
-				71D7495620F94B6500EA1D2F /* Main.storyboard */,
-			);
-			path = IB;
-			sourceTree = "<group>";
-		};
 		715F6C4320FD11C60045C13D /* CityCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +298,7 @@
 		71D7495420F94B6500EA1D2F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				715F6C4220FD119E0045C13D /* IB */,
+				71D7495620F94B6500EA1D2F /* Main.storyboard */,
 				715F6C3A20FD0E0D0045C13D /* Controllers */,
 				715F6C3B20FD0E110045C13D /* Views */,
 				7124EE90214E589E00C8CA99 /* Presenter.swift */,

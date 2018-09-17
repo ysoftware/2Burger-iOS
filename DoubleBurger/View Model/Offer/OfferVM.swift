@@ -24,7 +24,7 @@ final class OfferVM:ViewModel<Offer> {
 	}
 
 	var description: String {
-		return model?.description?.replacingOccurrences(of: "\\n", with: "\n") ?? ""
+		return model?.text?.replacingOccurrences(of: "\\n", with: "\n") ?? ""
 	}
 
 	var promoCode: String {
