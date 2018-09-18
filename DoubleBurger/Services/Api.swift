@@ -18,7 +18,7 @@ struct Api {
 
 	static func getEvents(with query: PaginationQuery,
 						  _ completion: @escaping (Result<PaginatedResponse<[Event]>, FirestoreHelperError>)->Void) {
-		let request = placeRef.collection(Keys.events).order(by: Keys.timestamp)
+		let request = placeRef.collection(Keys.events).order(by: Keys.timestamp, descending: true)
 		FirestoreHelper.getList(from: request,
 						  cursor: query.cursor,
 						  limit: query.size,
@@ -27,7 +27,7 @@ struct Api {
 
 	static func getOffers(with query: PaginationQuery,
 						  _ completion: @escaping (Result<PaginatedResponse<[Offer]>, FirestoreHelperError>)->Void) {
-		let request = placeRef.collection(Keys.offers).order(by: Keys.timestamp)
+		let request = placeRef.collection(Keys.offers).order(by: Keys.timestamp, descending: true)
 		FirestoreHelper.getList(from: request,
 								cursor: query.cursor,
 								limit: query.size,

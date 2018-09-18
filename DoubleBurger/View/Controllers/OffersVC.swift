@@ -92,18 +92,6 @@ extension MainViewController: ViewModelDelegate {
 	}
 }
 
-extension MainViewController: UICollectionViewDelegateFlowLayout {
-
-	func collectionView(_ collectionView: UICollectionView,
-						layout collectionViewLayout: UICollectionViewLayout,
-						sizeForItemAt indexPath: IndexPath) -> CGSize {
-		let format:CGFloat = collectionView == newsCollectionView ? 1.75 : 1.8
-		let width = view.bounds.width - 30
-		let height = width / format
-		return CGSize(width: width, height: height)
-	}
-}
-
 extension MainViewController: UICollectionViewDataSource {
 
 	func collectionView(_ collectionView: UICollectionView,
@@ -140,6 +128,18 @@ extension MainViewController: UICollectionViewDelegate {
 		else {
 
 		}
+	}
+}
+
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+
+	func collectionView(_ collectionView: UICollectionView,
+						layout collectionViewLayout: UICollectionViewLayout,
+						sizeForItemAt indexPath: IndexPath) -> CGSize {
+		let format:CGFloat = collectionView == newsCollectionView ? 1.75 : 1.8
+		let width = collectionView.bounds.width - 30
+		let height = width / format
+		return CGSize(width: width, height: height)
 	}
 }
 
