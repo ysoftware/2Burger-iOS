@@ -126,7 +126,7 @@ extension MainViewController: UICollectionViewDelegate {
 			Presenter.presentOffer(offersVM.item(at: indexPath.row), in: self)
 		}
 		else {
-
+			Presenter.presentEvent(newsVM.item(at: indexPath.row), in: self)
 		}
 	}
 }

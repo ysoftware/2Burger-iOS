@@ -19,7 +19,8 @@ final class CodeVC: UIViewController {
 
 	// MARK: - Properties
 
-	var offerVM:OfferVM!
+	var offerVM:OfferVM?
+	var eventVM:EventVM?
 
 	// MARK: - View controller
 
@@ -29,9 +30,17 @@ final class CodeVC: UIViewController {
 	}
 
 	func setup() {
-		titleLabel.text = offerVM.title
-		descriptionLabel.text = offerVM.description
-		codeLabel.text = offerVM.promoCode
-		offerVM.setImage(into: offerImage)
+		if let vm = self.offerVM {
+			titleLabel.text = vm.title
+			descriptionLabel.text = vm.text
+			codeLabel.text = vm.promoCode
+			vm.setImage(into: offerImage)
+		}
+		else if let vm = self.eventVM {
+			titleLabel.text = vm.title
+			descriptionLabel.text = vm.text
+			codeLabel.isHidden = true
+			vm.setImage(into: offerImage)
+		}
 	}
 }

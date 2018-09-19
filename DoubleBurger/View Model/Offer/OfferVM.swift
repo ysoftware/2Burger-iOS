@@ -23,7 +23,7 @@ final class OfferVM:ViewModel<Offer> {
 		return model?.title?.replacingOccurrences(of: "\\n", with: "\n") ?? ""
 	}
 
-	var description: String {
+	var text: String {
 		return model?.text?.replacingOccurrences(of: "\\n", with: "\n") ?? ""
 	}
 
