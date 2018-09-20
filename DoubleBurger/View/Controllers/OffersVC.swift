@@ -13,6 +13,8 @@ final class MainViewController: UIViewController {
 
 	// MARK: - Outlets
 
+	@IBOutlet weak var loadingView: UIView!
+	
 	@IBOutlet weak var cityButton: UIButton!
 	@IBOutlet weak var newsCollectionView:UICollectionView!
 	@IBOutlet weak var offersCollectionView:UICollectionView!
@@ -146,6 +148,8 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 extension MainViewController: ArrayViewModelDelegate {
 
 	func didChangeState(to state: ArrayViewModelState) {
+		self.loadingView.isHidden = state != .loading && state != .initial
+
 		switch state {
 		case .error(_):
 			call(message: "Произошла ошибка. Пожалуйста, повторите позже.")

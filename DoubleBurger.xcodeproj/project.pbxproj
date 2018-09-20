@@ -38,7 +38,6 @@
 		71D7497020F94B6500EA1D2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71D7495D20F94B6500EA1D2F /* GoogleService-Info.plist */; };
 		71D7497120F94B6500EA1D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D7495E20F94B6500EA1D2F /* LaunchScreen.storyboard */; };
 		71D7497220F94B6500EA1D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7496020F94B6500EA1D2F /* AppDelegate.swift */; };
-		71D7497320F94B6500EA1D2F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71D7496120F94B6500EA1D2F /* Info.plist */; };
 		71D7497520F94EB200EA1D2F /* PaginationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7497420F94EB200EA1D2F /* PaginationQuery.swift */; };
 		71ED4DB5213D248700958634 /* CodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED4DB4213D248700958634 /* CodeVC.swift */; };
 /* End PBXBuildFile section */
@@ -403,7 +402,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Ysoftware;
 				TargetAttributes = {
 					7195415F20F90B78008B92CC = {
@@ -450,7 +449,6 @@
 				7109024B20FF4B9C007DE01B /* NewsCell.xib in Resources */,
 				71D7497120F94B6500EA1D2F /* LaunchScreen.storyboard in Resources */,
 				71D7496C20F94B6500EA1D2F /* Main.storyboard in Resources */,
-				71D7497320F94B6500EA1D2F /* Info.plist in Resources */,
 				71D7497020F94B6500EA1D2F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
