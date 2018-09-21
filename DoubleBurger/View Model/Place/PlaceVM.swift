@@ -21,6 +21,10 @@ final class PlaceVM:ViewModel<Place> {
 		return model?.id ?? ""
 	}
 
+	var phoneNumberRaw: String {
+		return model?.phoneNumber ?? ""
+	}
+
 	// MARK: - View properties
 
 	var name: String {
@@ -28,7 +32,7 @@ final class PlaceVM:ViewModel<Place> {
 	}
 
 	var phoneNumber: String {
-		return model?.phoneNumber ?? ""
+		return format(phoneNumber: model?.phoneNumber ?? "")
 	}
 
 	var address: String {

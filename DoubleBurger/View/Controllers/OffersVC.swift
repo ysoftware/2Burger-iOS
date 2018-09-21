@@ -14,7 +14,6 @@ final class MainViewController: UIViewController {
 	// MARK: - Outlets
 
 	@IBOutlet weak var loadingView: UIView!
-	
 	@IBOutlet weak var cityButton: UIButton!
 	@IBOutlet weak var newsCollectionView:UICollectionView!
 	@IBOutlet weak var offersCollectionView:UICollectionView!
@@ -32,7 +31,7 @@ final class MainViewController: UIViewController {
 	// MARK: - Actions
 
 	@IBAction func contactsTapped(_ sender: Any) {
-		Presenter.presentContacts(in: self)
+		Presenter.presentContacts(in: self, for: placeVM)
 	}
 
 	@IBAction func cityTapped(_ sender: Any) {

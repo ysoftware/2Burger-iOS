@@ -167,27 +167,27 @@
         <scene sceneID="Rts-G0-KCJ">
             <objects>
                 <viewController storyboardIdentifier="CodeVC" id="tvh-MP-jgk" customClass="CodeVC" customModule="DoubleBurger" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="k2e-L1-nmt">
+                    <view key="view" contentMode="scaleToFill" id="k2e-L1-nmt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVp-Dz-NJF">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVp-Dz-NJF">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrI-ka-gSl">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="173.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="485"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dBS-H7-dht">
-                                                <rect key="frame" x="20" y="20" width="0.0" height="133.5"/>
+                                                <rect key="frame" x="20" y="20" width="335" height="445"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дарим Бургер бесплатно!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRK-IM-98x">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AWa-f2-SQg" customClass="RoundedImageView" customModule="DoubleBurger" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="35.5" width="0.0" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="35.5" width="335" height="134"/>
                                                         <color key="backgroundColor" white="0.88655598960000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="AWa-f2-SQg" secondAttribute="height" multiplier="2.5" id="ah3-E0-EwE"/>
@@ -199,15 +199,20 @@
                                                                 <real key="value" value="0.050000000000000003"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="f0a-f1-cGy"/>
+                                                            </mask>
+                                                        </variation>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqY-xl-6tV">
-                                                        <rect key="frame" x="0.0" y="50.5" width="0.0" height="50"/>
+                                                        <rect key="frame" x="0.0" y="184.5" width="335" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="40"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nRA-MH-S9u">
-                                                        <rect key="frame" x="0.0" y="115.5" width="0.0" height="18"/>
+                                                        <rect key="frame" x="0.0" y="249.5" width="335" height="195.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <string key="text">Хочешь бургер бесплатно? 
 
@@ -339,6 +344,9 @@
                                                                         <state key="normal" title="Показать на карте">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="mapTapped:" destination="46t-jN-XAW" eventType="touchUpInside" id="H7D-Hn-4XW"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="1" green="1" blue="0.37966579859999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -405,6 +413,10 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="uUq-bm-4k5" appends="YES" id="2G6-RN-Ou4"/>
+                                                                </connections>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2F1-4W-Opb">
                                                                 <rect key="frame" x="0.0" y="53.5" width="335" height="38.5"/>
@@ -419,7 +431,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OsP-Ki-eRg">
                                                                         <rect key="frame" x="40" y="0.0" width="295" height="38.5"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="contact@2burger.ru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swn-Es-CEe">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="anton.larin@2burger.ru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swn-Es-CEe">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="20.5"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <nil key="textColor"/>
@@ -432,8 +444,13 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
+                                                                        <gestureRecognizers/>
                                                                     </stackView>
                                                                 </subviews>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="s6b-Jb-Rsr" appends="YES" id="lqz-7H-JqZ"/>
+                                                                </connections>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
@@ -452,17 +469,29 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="IDY-BE-JN2">
                                                                         <rect key="frame" x="40" y="0.0" width="255" height="51.5"/>
                                                                         <subviews>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk" translatesAutoresizingMaskIntoConstraints="NO" id="K8C-Yc-9ug">
+                                                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk" translatesAutoresizingMaskIntoConstraints="NO" id="K8C-Yc-9ug">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="51.5" height="51.5"/>
+                                                                                <gestureRecognizers/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="K8C-Yc-9ug" secondAttribute="height" id="QGp-6e-6a2"/>
                                                                                 </constraints>
+                                                                                <connections>
+                                                                                    <outletCollection property="gestureRecognizers" destination="h3B-eV-wEO" appends="YES" id="iqe-Ds-lSg"/>
+                                                                                </connections>
                                                                             </imageView>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram" translatesAutoresizingMaskIntoConstraints="NO" id="SO8-Gy-ldP">
+                                                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram" translatesAutoresizingMaskIntoConstraints="NO" id="SO8-Gy-ldP">
                                                                                 <rect key="frame" x="101.5" y="0.0" width="52" height="51.5"/>
+                                                                                <gestureRecognizers/>
+                                                                                <connections>
+                                                                                    <outletCollection property="gestureRecognizers" destination="s4L-Rj-nGY" appends="YES" id="ryG-Ua-L5H"/>
+                                                                                </connections>
                                                                             </imageView>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="RFW-6D-LoM">
+                                                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="RFW-6D-LoM">
                                                                                 <rect key="frame" x="203.5" y="0.0" width="51.5" height="51.5"/>
+                                                                                <gestureRecognizers/>
+                                                                                <connections>
+                                                                                    <outletCollection property="gestureRecognizers" destination="26M-Hl-gqI" appends="YES" id="dm4-iQ-FRt"/>
+                                                                                </connections>
                                                                             </imageView>
                                                                         </subviews>
                                                                     </stackView>
@@ -507,8 +536,36 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U9D-wx-9XB"/>
                     </view>
+                    <connections>
+                        <outlet property="phoneNumberLabel" destination="PJG-so-UGT" id="4b3-QK-flC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQe-8E-Ru2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="h3B-eV-wEO" userLabel="vk tap">
+                    <connections>
+                        <action selector="vkTapped:" destination="46t-jN-XAW" id="BZE-8B-6q4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="s4L-Rj-nGY" userLabel="ig tap">
+                    <connections>
+                        <action selector="igTapped:" destination="46t-jN-XAW" id="vBR-Ec-pNn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="26M-Hl-gqI" userLabel="fb tap">
+                    <connections>
+                        <action selector="fbTapped:" destination="46t-jN-XAW" id="3EX-Hs-8nX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uUq-bm-4k5" userLabel="phone tap">
+                    <connections>
+                        <action selector="phoneTapped:" destination="46t-jN-XAW" id="85a-CP-1L3"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="s6b-Jb-Rsr" userLabel="mail tap">
+                    <connections>
+                        <action selector="mailTapped:" destination="46t-jN-XAW" id="NIc-WO-SUf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2766" y="-1266"/>
         </scene>
