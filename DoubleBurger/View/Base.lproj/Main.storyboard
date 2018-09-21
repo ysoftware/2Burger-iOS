@@ -191,7 +191,7 @@
                                                         <color key="backgroundColor" white="0.88655598960000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="AWa-f2-SQg" secondAttribute="height" multiplier="2.5" id="ah3-E0-EwE"/>
-                                                            <constraint firstAttribute="width" secondItem="AWa-f2-SQg" secondAttribute="height" multiplier="1.886" id="f0a-f1-cGy"/>
+                                                            <constraint firstAttribute="width" secondItem="AWa-f2-SQg" secondAttribute="height" multiplier="1.886" priority="999" id="f0a-f1-cGy"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isRelativeRadius" value="YES"/>
@@ -199,11 +199,6 @@
                                                                 <real key="value" value="0.050000000000000003"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="f0a-f1-cGy"/>
-                                                            </mask>
-                                                        </variation>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqY-xl-6tV">
                                                         <rect key="frame" x="0.0" y="184.5" width="335" height="50"/>
