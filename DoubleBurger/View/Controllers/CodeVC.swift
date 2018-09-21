@@ -11,6 +11,8 @@ import UIKit
 final class CodeVC: UIViewController {
 
 	// MARK: - Outlets
+	@IBOutlet weak var imageOffersConstraint: NSLayoutConstraint!
+	@IBOutlet weak var imageNewsConstraint: NSLayoutConstraint!
 
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var offerImage: UIImageView!
@@ -35,12 +37,18 @@ final class CodeVC: UIViewController {
 			descriptionLabel.text = vm.text
 			codeLabel.text = vm.promoCode
 			vm.setImage(into: offerImage)
+
+			imageNewsConstraint.isActive = false
+			imageOffersConstraint.isActive = true
 		}
 		else if let vm = self.eventVM {
 			titleLabel.text = vm.title
 			descriptionLabel.text = vm.text
 			codeLabel.isHidden = true
 			vm.setImage(into: offerImage)
+
+			imageNewsConstraint.isActive = true
+			imageOffersConstraint.isActive = false
 		}
 	}
 }

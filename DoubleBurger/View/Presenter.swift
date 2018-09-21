@@ -42,14 +42,14 @@ final class Presenter {
 	static func presentOffer(_ offerVM:OfferVM, in viewController:UIViewController) {
 		let vc = R.storyboard.main.codeVC()!
 		vc.offerVM = offerVM
-		let p = presenter(bounds: viewController.view.bounds, percent: 0.5)
+		let p = presenter(bounds: viewController.view.bounds, percent: 0.6)
 		viewController.customPresentViewController(p, viewController: vc, animated: true)
 	}
 
 	static func presentEvent(_ eventVM:EventVM, in viewController:UIViewController) {
 		let vc = R.storyboard.main.codeVC()!
 		vc.eventVM = eventVM
-		let p = presenter(bounds: viewController.view.bounds, percent: 0.8)
+		let p = presenter(bounds: viewController.view.bounds, percent: 0.7)
 		viewController.customPresentViewController(p, viewController: vc, animated: true)
 	}
 }
