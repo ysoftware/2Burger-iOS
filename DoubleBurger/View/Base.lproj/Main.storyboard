@@ -310,15 +310,18 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7BW-pY-C11">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="508.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="teK-Iu-SBB">
-                                                <rect key="frame" x="20" y="20" width="335" height="468.5"/>
+                                                <rect key="frame" x="20" y="20" width="335" height="427"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QyL-xa-osP" customClass="RoundedView" customModule="DoubleBurger" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="223.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="jSr-JG-nJg" customClass="RoundedImageView" customModule="DoubleBurger" customModuleProvider="target">
+                                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="y7r-0u-CJW">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="223.5"/>
+                                                            </mapView>
+                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="jSr-JG-nJg" customClass="RoundedImageView" customModule="DoubleBurger" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="223.5"/>
                                                                 <color key="backgroundColor" red="0.75" green="0.18959429119999999" blue="0.75" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
@@ -331,7 +334,7 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isRelativeRadius" value="NO"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KN-lu-H5a" customClass="RoundedView" customModule="DoubleBurger" customModuleProvider="target">
+                                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7KN-lu-H5a" customClass="RoundedView" customModule="DoubleBurger" customModuleProvider="target">
                                                                 <rect key="frame" x="20" y="153.5" width="295" height="40"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ8-Zo-dlU">
@@ -364,8 +367,12 @@
                                                         <constraints>
                                                             <constraint firstItem="jSr-JG-nJg" firstAttribute="leading" secondItem="QyL-xa-osP" secondAttribute="leading" id="4ST-iv-buK"/>
                                                             <constraint firstAttribute="trailing" secondItem="jSr-JG-nJg" secondAttribute="trailing" id="8oN-Jl-blM"/>
+                                                            <constraint firstAttribute="bottom" secondItem="y7r-0u-CJW" secondAttribute="bottom" id="AUL-MT-e0H"/>
                                                             <constraint firstAttribute="bottom" secondItem="jSr-JG-nJg" secondAttribute="bottom" id="D3o-sX-qMW"/>
+                                                            <constraint firstAttribute="trailing" secondItem="y7r-0u-CJW" secondAttribute="trailing" id="HPN-Fc-rJE"/>
                                                             <constraint firstItem="jSr-JG-nJg" firstAttribute="top" secondItem="QyL-xa-osP" secondAttribute="top" id="Lhi-3V-Rqa"/>
+                                                            <constraint firstItem="y7r-0u-CJW" firstAttribute="top" secondItem="QyL-xa-osP" secondAttribute="top" id="Rqp-zz-DJu"/>
+                                                            <constraint firstItem="y7r-0u-CJW" firstAttribute="leading" secondItem="QyL-xa-osP" secondAttribute="leading" id="U6N-Mj-UmB"/>
                                                             <constraint firstAttribute="bottom" secondItem="7KN-lu-H5a" secondAttribute="bottom" constant="30" id="tHa-Of-cBX"/>
                                                             <constraint firstItem="7KN-lu-H5a" firstAttribute="centerX" secondItem="QyL-xa-osP" secondAttribute="centerX" id="uPX-mq-8rO"/>
                                                             <constraint firstAttribute="trailing" secondItem="7KN-lu-H5a" secondAttribute="trailing" constant="20" id="vSC-Lx-e9g"/>
@@ -450,16 +457,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zLS-mW-6yW">
-                                                        <rect key="frame" x="0.0" y="375.5" width="335" height="93"/>
+                                                        <rect key="frame" x="0.0" y="375.5" width="335" height="51.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double Burger в соцсетях" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foZ-YZ-Sy3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="21.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1v0-Zj-to4">
-                                                                <rect key="frame" x="0.0" y="41.5" width="335" height="51.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="51.5"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="IDY-BE-JN2">
                                                                         <rect key="frame" x="40" y="0.0" width="255" height="51.5"/>
@@ -532,6 +533,7 @@
                         <viewLayoutGuide key="safeArea" id="U9D-wx-9XB"/>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="y7r-0u-CJW" id="4mV-Yi-RUI"/>
                         <outlet property="phoneNumberLabel" destination="PJG-so-UGT" id="4b3-QK-flC"/>
                     </connections>
                 </viewController>

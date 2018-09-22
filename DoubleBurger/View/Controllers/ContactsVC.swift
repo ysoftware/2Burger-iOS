@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import MapKit
 
 final class ContactsViewController: UIViewController {
 
 	// MARK: - Outlets
-
+	
+	@IBOutlet weak var mapView: MKMapView!
 	@IBOutlet weak var phoneNumberLabel: UILabel!
 
 	// MARK: - Actions
@@ -61,5 +63,44 @@ final class ContactsViewController: UIViewController {
 
 	func setup() {
 		phoneNumberLabel.text = placeVM.phoneNumber
+
+		mapView.delegate = self
+		addPin(for: placeVM)
+		focusMapView(placeVM)
+	}
+
+	func addPin(for place:PlaceVM) {
+		let annotation = MKPointAnnotation()
+		let centerCoordinate = place.location.coordinate
+		annotation.coordinate = centerCoordinate
+		annotation.title = place.address
+		mapView.addAnnotation(annotation)
+	}
+
+	func focusMapView(_ place:PlaceVM) {
+		let mapCenter = place.location.coordinate
+		let region = MKCoordinateRegionMakeWithDistance(mapCenter, 200, 200)
+		mapView.region = region
+	}
+
+	func openMap(at coordinates:CLLocationCoordinate2D, name:String) {
+		let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, 200, 200)
+		let options = [
+			MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+			MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span),
+			MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving
+			] as [String : Any]
+		let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+		let mapItem = MKMapItem(placemark: placemark)
+		mapItem.name = name
+		mapItem.openInMaps(launchOptions: options)
+	}
+}
+
+extension ContactsViewController: MKMapViewDelegate {
+
+	func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+		mapView.deselectAnnotation(view.annotation, animated: true)
+		openMap(at: placeVM.location.coordinate, name: "2Burger \(placeVM.name)")
 	}
 }

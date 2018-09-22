@@ -6,6 +6,7 @@
 //  Copyright © 2018 Ysoftware. All rights reserved.
 //
 
+import CoreLocation
 import MVVM
 
 final class PlaceVM:ViewModel<Place> {
@@ -23,6 +24,11 @@ final class PlaceVM:ViewModel<Place> {
 
 	var phoneNumberRaw: String {
 		return model?.phoneNumber ?? ""
+	}
+
+	var location:CLLocation {
+		guard let loc = model?.location else { return CLLocation() }
+		return CLLocation(latitude: loc.latitude, longitude: loc.longitude)
 	}
 
 	// MARK: - View properties

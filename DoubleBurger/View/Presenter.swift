@@ -38,7 +38,7 @@ final class Presenter {
 	static func presentContacts(in viewController:UIViewController, for placeVM:PlaceVM) {
 		let vc = R.storyboard.main.contactsViewController()!
 		vc.placeVM = placeVM
-		let p = presenter(bounds: viewController.view.bounds, percent: 0.8)
+		let p = presenter(bounds: viewController.view.bounds, percent: 0.7)
 		viewController.customPresentViewController(p, viewController: vc, animated: true)
 	}
 

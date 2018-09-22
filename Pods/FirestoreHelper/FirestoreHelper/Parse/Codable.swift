@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 public extension Decodable {
 
@@ -63,22 +64,3 @@ extension Dictionary where Key == String {
 		}
 	}
 }
-
-/// [Dictionary] -> [T:Decodable]
-extension Array where Element == Dictionary<String, Any> {
-
-	/// Преобразовать в объект.
-	/// - Parameter class: класс объекта.
-	func parse<T:Decodable>(arrayOf class:T.Type = T.self) -> [T] {
-		do {
-			let data = try JSONSerialization.data(withJSONObject: self)
-			return try JSONDecoder().decode([T].self, from: data)
-		}
-		catch {
-			print("search: parse arrayOf \(T.self): \(error)")
-			return []
-		}
-	}
-
-}
-

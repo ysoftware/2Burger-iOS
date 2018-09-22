@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import FirestoreHelper
+import FirebaseFirestore
 
 final class Place: Codable {
 
@@ -14,6 +16,7 @@ final class Place: Codable {
 	var name = ""
 	var address = ""
 	var phoneNumber = ""
+	var location = Location(latitude: 0, longitude: 0)
 
 	var social:[String:String]?
 }
