@@ -56,6 +56,8 @@ final class MainViewController: UIViewController {
 			setupCollectionViews()
 			setupCity()
 		}
+
+		placeVM.model = nil
 	}
 
 	private func setup() {
@@ -87,7 +89,7 @@ final class MainViewController: UIViewController {
 extension MainViewController: ViewModelDelegate {
 
 	func didUpdateData<M>(_ viewModel: ViewModel<M>) where M : Equatable {
-		if viewModel is PlaceVM {
+		if viewModel as? PlaceVM == placeVM {
 			cityButton.setTitle(placeVM.name, for: .normal)
 		}
 	}
